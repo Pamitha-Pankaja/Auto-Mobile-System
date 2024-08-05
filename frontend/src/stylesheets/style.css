@@ -717,7 +717,8 @@ nav.fill ul li a:after {
 }
 
 .our-services-section .our-services-outer .our-services-car-img img{
-  width: 450px;
+  margin-left: 8%; 
+  width: 550px;
 }
 
 .our-services-section .our-services-left-img{
