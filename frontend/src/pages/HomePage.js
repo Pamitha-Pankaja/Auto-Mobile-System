@@ -11,8 +11,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
-import WhyChooseUs from '../components/WhyChooseUs';
-import Banner from '../components/Banner';
+import WhyChooseUs from '../components/HomeSections/WhyChooseUs';
+import Banner from '../components/HomeSections/Banner';
+import AboutUs from '../components/HomeSections/AboutUs';
+import Services from '../components/HomeSections/Services';
 
 const Home = () => {
     useEffect(() => {
@@ -28,6 +30,8 @@ const Home = () => {
                 <Banner/>
             </div>
             <WhyChooseUs />
+            <AboutUs/>
+            <Services/>
         </div>
     );
 };

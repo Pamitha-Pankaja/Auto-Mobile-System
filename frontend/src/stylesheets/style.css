@@ -346,13 +346,18 @@ a {
   margin-bottom: 36px;
   color: var(--e-global-color-primary);
 }
+
+.text-icon {
+  margin-right: 10px;
+}
+
 .whychoose-section .autorix-text:before {
-  background: none;
+  background:none;
   content: "";
   width: 28px;
   height: 20px;
   position: absolute;
-  top: -4px;
+  top: 0px;
   left: -142px;
   right: 0;
   margin: 0 auto;
@@ -376,8 +381,10 @@ a {
   border-bottom: 2px solid var(--e-global-color-secondary);
 }
 .whychoose-section .blogs-section:hover{
-  background-color: var(--e-global-color-red); /* Change background color */
-  transform: translateY(-10px); /* Move upwards by 10px */
+  background-color: var(--e-global-color-accent); /* Change background color */
+  background-position: 100%;
+  transform: translateY(-0.5rem);
+  transition: all ease-in-out 0.3s;
 }
 
 .whychoose-section .blogs-section .blogs-h5{
@@ -708,6 +715,11 @@ nav.fill ul li a:after {
   left: -45px;
   right: 0;
 }
+
+.our-services-section .our-services-outer .our-services-car-img img{
+  width: 450px;
+}
+
 .our-services-section .our-services-left-img{
   padding-left: 80px;
 }

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../stylesheets/style.css';
-import bannerImg from '../assets/images/car-img-2.png';
-import BannerCarousel from '../components/BannerCarousel';
+import bannerImg from '../../assets/images/car-img-2.png';
+import BannerCarousel from '../BannerCarousel';
 
 const Banner = () => {
     return (
