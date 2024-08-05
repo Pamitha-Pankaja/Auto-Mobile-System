@@ -643,7 +643,7 @@ nav.fill ul li a:after {
 
 /* our-services */
 .our-services-section .autorix-text:before {
-  background: url(../assets/images/whychoose-bars.png);
+  background:none;
   content: "";
   width: 28px;
   height: 20px;
@@ -757,7 +757,13 @@ nav.fill ul li a:after {
   font-size: 20px;
   line-height: 22px;
 }
+
+
 /* mission-section */
+.mission-section .about-us-content{
+  margin-left: 20px;
+}
+
 .mission-section .autorix-text {
   letter-spacing: 0px;
   margin-bottom: 20px;
@@ -803,11 +809,14 @@ nav.fill ul li a:after {
 }
 .mission-section .our-mission-figure-box{
   position: absolute;
-  left: -167px;
-  TOP:0px;
+  left: -6px;
+}
+.mission-section .our-mission-figure-box img {
+  margin-left: 20px;
+  width:28%;
 }
 .mission-section .about-us-content p{
-color:var(--e-global-color-text)
+color:var(--e-global-color-text);
 }
 .mission-section .about-us-content .our-mission-p1 {
   margin-bottom: 8px;
@@ -877,7 +886,7 @@ color:var(--e-global-color-text)
   font-weight: 400;
 }
 .mission-section{
-  padding: 141px 0 112px;
+  padding: 0px 0 0px;
 }
 .mission-section .mission-red-box .contact-form-margin{
   margin-bottom: 23px;

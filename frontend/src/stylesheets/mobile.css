@@ -142,14 +142,14 @@ h1 {
   left: -93px;
 }
 /* our-mission */
-.mission-section .our-mission-figure-box img {
-  width:100%;
-}
-.mission-section .our-mission-figure-box {
+/* .mission-section .our-mission-figure-box img {
+  width:40%;
+} */
+/* .mission-section .our-mission-figure-box {
   position: absolute;
   left: -54px;
   top: 144px;
-}
+} */
 .footer-outer-margin figure {
   left: -52px;
 }
@@ -257,16 +257,16 @@ h1 {
   padding: 28px 0px 0 98px;
 }
 /* our-mission */
-.mission-section .our-mission-figure-box {
+/* .mission-section .our-mission-figure-box {
   position: absolute;
   left: -29px;
   TOP: 106px;
-}
-.mission-section .our-mission-figure-box img{
+}*/
+/* .mission-section .our-mission-figure-box img{
   width:100%;
-}
+}  */
 .mission-section {
-  padding: 104px 0 46px;
+  padding: 50px 0 0px;
 }
 .footer-outer-margin figure img {
   width: 550px;
@@ -492,7 +492,7 @@ h2 {
 /* our-services */
 
 .our-services-section {
-  padding: 100px 0 100px;
+  padding: 100px 0 0px;
 }
 .our-services-section .autorix-text:before {
   width: 25px;
@@ -535,7 +535,7 @@ h2 {
 }
 /* our-mission */
 .mission-section {
-  padding: 100px 0 70px;
+  padding: 50px 0 0px;
 }
 .mission-section .our-mission-figure-box {
   position: absolute;
@@ -1386,7 +1386,7 @@ h2 {
 }
 /*  our-services-section*/
 .our-services-section {
-  padding: 67px 0 70px;
+  padding: 70px 0 0px;
 }
 .our-services-section .banner-btn a {
   padding: 14px 20px 14px 22px !important;
@@ -1451,7 +1451,7 @@ h2 {
   margin-left: 12px;
 }
 .mission-section {
-  padding: 70px 0 40px;
+  padding: 50px 0 0px;
 }
 .mission-section .about-us-content .list-margin-bottom {
   margin-bottom: 10px;

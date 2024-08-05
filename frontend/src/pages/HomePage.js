@@ -15,6 +15,8 @@ import WhyChooseUs from '../components/HomeSections/WhyChooseUs';
 import Banner from '../components/HomeSections/Banner';
 import AboutUs from '../components/HomeSections/AboutUs';
 import Services from '../components/HomeSections/Services';
+import Mission from '../components/HomeSections/Mission';
+import Offers from '../components/HomeSections/Offers';
 
 const Home = () => {
     useEffect(() => {
@@ -32,6 +34,8 @@ const Home = () => {
             <WhyChooseUs />
             <AboutUs/>
             <Services/>
+            <Mission/>
+            <Offers/>
         </div>
     );
 };
