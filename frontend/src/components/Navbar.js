@@ -7,7 +7,7 @@ const Navbar = () => {
         <header className="header">
             <div className="main-header">
                 <div className="container-fluid">
-                    <nav className="navbar navbar-expand-lg navbar-light fixed-top p-4">
+                    <nav className="navbar navbar-expand-lg navbar-light fixed p-0">
                         <div className="container d-flex justify-content-center">
                             <Link className="navbar-brand pt-0" to="/"><img src="./assets/images/autorix-logo.png" alt="" className="img-fluid" /></Link>
                             <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

@@ -196,7 +196,7 @@ a {
   padding: 0px 0 277px 0px;
 }
 .home-banner-section{
-  padding-top: 157px;
+  padding-top: 120px;
   padding-left: 344px;
   position: relative;
 }
@@ -204,7 +204,7 @@ a {
   position: absolute;
   right: -10px;
   bottom: 0px;
-  top: 110px;
+  top: 60px;
   max-width: 780px;
 }
 .home-banner-text h1 {
