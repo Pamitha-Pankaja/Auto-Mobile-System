@@ -886,7 +886,7 @@ color:var(--e-global-color-text);
   font-weight: 400;
 }
 .mission-section{
-  padding: 0px 0 0px;
+  padding: 0px 0 70px;
 }
 .mission-section .mission-red-box .contact-form-margin{
   margin-bottom: 23px;
@@ -1313,7 +1313,7 @@ box-shadow: 0px 7px 21px 0 #dae0e5;
   z-index: -1;
 }
 .our-work-section .autorix-text:before {
-  background: url(../assets/images/whychoose-bars.png);
+  background:none;
   content: "";
   width: 28px;
   height: 20px;
@@ -1399,6 +1399,17 @@ box-shadow: 0px 7px 21px 0 #dae0e5;
   width: 100%;
   height: 77%
 }
+.carousel-controls {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
 
 /* form-section */
 .contact-us-form{

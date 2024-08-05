@@ -17,6 +17,8 @@ import AboutUs from '../components/HomeSections/AboutUs';
 import Services from '../components/HomeSections/Services';
 import Mission from '../components/HomeSections/Mission';
 import Offers from '../components/HomeSections/Offers';
+import Team from '../components/HomeSections/Team';
+import Works from '../components/HomeSections/Works';
 
 const Home = () => {
     useEffect(() => {
@@ -36,6 +38,8 @@ const Home = () => {
             <Services/>
             <Mission/>
             <Offers/>
+            <Team/>
+            <Works/>
         </div>
     );
 };

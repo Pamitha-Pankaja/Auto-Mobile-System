@@ -266,7 +266,7 @@ h1 {
   width:100%;
 }  */
 .mission-section {
-  padding: 50px 0 0px;
+  padding: 50px 0 70px;
 }
 .footer-outer-margin figure img {
   width: 550px;
@@ -535,7 +535,7 @@ h2 {
 }
 /* our-mission */
 .mission-section {
-  padding: 50px 0 0px;
+  padding: 50px 0 70px;
 }
 .mission-section .our-mission-figure-box {
   position: absolute;
@@ -1451,7 +1451,7 @@ h2 {
   margin-left: 12px;
 }
 .mission-section {
-  padding: 50px 0 0px;
+  padding: 50px 0 70px;
 }
 .mission-section .about-us-content .list-margin-bottom {
   margin-bottom: 10px;

@@ -1,8 +1,4 @@
-// src/components/BannerCarousel.js
-
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is included
-import 'bootstrap/dist/js/bootstrap.bundle.min'; // Ensure Bootstrap JS is included
 
 const BannerCarousel = () => {
   return (
