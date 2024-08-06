@@ -19,6 +19,7 @@ import Mission from '../components/HomeSections/Mission';
 import Offers from '../components/HomeSections/Offers';
 import Team from '../components/HomeSections/Team';
 import Works from '../components/HomeSections/Works';
+import Ratings from '../components/HomeSections/Ratings';
 
 const Home = () => {
     useEffect(() => {
@@ -40,6 +41,7 @@ const Home = () => {
             <Offers/>
             <Team/>
             <Works/>
+            {/* <Ratings/> */}
         </div>
     );
 };

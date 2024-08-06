@@ -1,0 +1,61 @@
+.admin-dashboard {
+    padding: 20px;
+  }
+ 
+  .admin-dashboard h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+ 
+  .admin-dashboard table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+ 
+  .admin-dashboard th,
+  .admin-dashboard td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+ 
+  .admin-dashboard th {
+    background-color: #f4f4f4;
+  }
+ 
+  .admin-dashboard .status-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+  }
+ 
+  .admin-dashboard .status-button.pending {
+    background-color: #ffc107; /* Yellow for pending */
+  }
+ 
+  .admin-dashboard .status-button.approved {
+    background-color: #28a745; /* Green for approved */
+  }
+ 
+  .admin-dashboard .status-button.pending:hover {
+    background-color: #e0a800; /* Darker yellow for hover */
+  }
+ 
+  .admin-dashboard .status-button.approved:hover {
+    background-color: #218838; /* Darker green for hover */
+  }
+ 
+  /* Additional styles for the confirmation dialog */
+  .react-confirm-alert-overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+ 
+  .react-confirm-alert-body {
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+
