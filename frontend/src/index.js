@@ -5,6 +5,8 @@ import { BrowserRouter } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import $ from 'jquery';
+import Popper from '@popperjs/core';
 import 'aos/dist/aos.css';
 import './stylesheets/style.css'
 import './stylesheets/mobile.css'

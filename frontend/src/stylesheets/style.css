@@ -90,6 +90,10 @@ a {
 }
 
 /****** headerm and banner section******/
+.navbar{
+    background-color: rgba(13, 15, 40, 0.571); 
+    transition: background-color 0.3s ease;
+}
 
 .navbar-nav li:first-child {
   margin-left:0px;
@@ -123,6 +127,10 @@ a {
   position: relative;
   
 }
+.nav-link {
+  cursor: pointer; /* Ensure cursor is set to pointer */
+}
+
 .main-header {
   padding: 40px 265px 0px 360px;
 }
@@ -886,7 +894,7 @@ color:var(--e-global-color-text);
   font-weight: 400;
 }
 .mission-section{
-  padding: 0px 0 70px;
+  padding: 100px 0 70px;
 }
 .mission-section .mission-red-box .contact-form-margin{
   margin-bottom: 23px;

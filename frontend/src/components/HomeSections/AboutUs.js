@@ -11,7 +11,7 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <section className="about-us-section">
+    <section id='about' className="about-us-section">
       <div className="container">
         <div className="row">
           <div className="col-lg-1 col-md-1 col-sm-12"></div>

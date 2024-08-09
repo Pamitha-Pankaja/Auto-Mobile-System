@@ -10,7 +10,7 @@ import ourServiceCar from '../../assets/images/our-services-car-img.png';
 
 const Services = () => {
     return (
-        <section className="our-services-section overflow-hidden">
+        <section id='services' className="our-services-section overflow-hidden">
             <div className="container">
                 <div className="row">
                     <div className="col-12">

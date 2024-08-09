@@ -4,14 +4,14 @@ import work1 from '../../assets/images/work-img1.jpg';
 import work2 from '../../assets/images/work-img2.jpg';
 import work3 from '../../assets/images/work-img3.jpg';
 
-const Works = () => {
+const Projects = () => {
     return (
-        <section className="our-work-section">
+        <section id='projects' className="our-work-section">
             <div className="container">
                 <div className="row">
                     <div className="col-12">
                         <h6 className="autorix-text text-center">
-                            <img src={textIcon} alt="Why Choose Us Left Icon" className="text-icon" />Our Work
+                            <img src={textIcon} alt="Why Choose Us Left Icon" className="text-icon" />Our Projects
                         </h6>
                         <h2 className="text-center" data-aos="fade-zoom-in">
                             Latest projects we have done
@@ -128,4 +128,4 @@ const Works = () => {
     );
 };
 
-export default Works;
+export default Projects;

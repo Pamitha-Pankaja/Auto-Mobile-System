@@ -7,9 +7,6 @@ import bannerImg1 from '../assets/images/car-img-1.png';
 import bannerImg2 from '../assets/images/car-image.png';
 import bannerImg3 from '../assets/images/car-img-2.png';
 import BannerCarousel from '../components/BannerCarousel';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-import 'aos/dist/aos.css';
 import AOS from 'aos';
 import WhyChooseUs from '../components/HomeSections/WhyChooseUs';
 import Banner from '../components/HomeSections/Banner';
@@ -18,8 +15,7 @@ import Services from '../components/HomeSections/Services';
 import Mission from '../components/HomeSections/Mission';
 import Offers from '../components/HomeSections/Offers';
 import Team from '../components/HomeSections/Team';
-import Works from '../components/HomeSections/Works';
-import Ratings from '../components/HomeSections/Ratings';
+import Projects from '../components/HomeSections/Projects';
 
 const Home = () => {
     useEffect(() => {
@@ -30,18 +26,16 @@ const Home = () => {
     }, []);
     return (
         <div>
-            <div class="home-header-section">
+            <div id='home' class="home-header-section">
                 <Navbar />
                 <Banner/>
-            </div>
-            <WhyChooseUs />
+            </div>  
+            <WhyChooseUs/>          
             <AboutUs/>
             <Services/>
+            <Projects/>
             <Mission/>
-            <Offers/>
             <Team/>
-            <Works/>
-            {/* <Ratings/> */}
         </div>
     );
 };
