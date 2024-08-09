@@ -9,7 +9,7 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const sections = ['home', 'about', 'services', 'projects', 'cart', 'checkout', 'team', 'shop', 'contact'];
+            const sections = ['home', 'about', 'services', 'team', 'contact'];
             const scrollY = window.scrollY;
 
             sections.forEach(section => {
@@ -54,15 +54,9 @@ const Navbar = () => {
                                     </li>      
                                     <li className={`nav-item ${activeLink === 'services' ? 'active' : ''}`}>
                                         <ScrollLink className="nav-link text-decoration-none navbar-text-color" to="services" smooth={true} duration={500}>Services</ScrollLink>
-                                    </li>
-                                    <li className={`nav-item ${activeLink === 'projects' ? 'active' : ''}`}>
-                                        <ScrollLink className="nav-link text-decoration-none navbar-text-color" to="projects" smooth={true} duration={500}>Projects</ScrollLink>
-                                    </li>                              
+                                    </li>                          
                                     <li className={`nav-item ${activeLink === 'team' ? 'active' : ''}`}>
                                         <ScrollLink className="nav-link text-decoration-none contact-us-margin navbar-text-color" to="team" smooth={true} duration={500}>Team</ScrollLink>
-                                    </li>
-                                    <li className={`nav-item ${activeLink === 'shop' ? 'active' : ''}`}>
-                                        <ScrollLink className="nav-link text-decoration-none contact-us-margin navbar-text-color" to="mission" smooth={true} duration={500}>Mission</ScrollLink>
                                     </li>
                                     <li className={`nav-item ${activeLink === 'contact' ? 'active' : ''}`}>
                                         <ScrollLink className="nav-link text-decoration-none contact-us-margin navbar-text-color" to="contact" smooth={true} duration={500}>Contact</ScrollLink>

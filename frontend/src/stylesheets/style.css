@@ -1202,7 +1202,6 @@ box-shadow: 0px 7px 21px 0 #dae0e5;
 }
 
 /* our-work-section */
-
 .our-work-section{
   padding: 140px 0 105px;
   position: relative;
@@ -1229,7 +1228,7 @@ box-shadow: 0px 7px 21px 0 #dae0e5;
   background: var(--e-global-color-secondary);
   position: relative;
   padding: 26px 9px 30px;
-  left: 0;
+  left: 0px;
   border-radius: 0;
   text-align: center;
   box-shadow: 0px 0px 100px 0px rgb(226 228 231);
@@ -1421,12 +1420,11 @@ box-shadow: 0px 7px 21px 0 #dae0e5;
 
 /* form-section */
 .contact-us-form{
-  background-image: url(../assets/images/our-services-background-img.jpg);
-  padding: 138px 0 140px;
+  padding: 0px 0 140px;
   position: relative;
 }
 .contact-us-form .autorix-text:before {
-  background: url(../assets/images/whychoose-bars.png);
+  background: none;
   content: "";
   width: 25px;
   height: 21px;
@@ -1444,7 +1442,6 @@ box-shadow: 0px 7px 21px 0 #dae0e5;
   color: var(--e-global-color-accent);
 }
 .contact-us-form h2 {
-  padding: 0 264px;
   text-transform: uppercase;
   margin-bottom: 32px;
 }
@@ -1492,14 +1489,14 @@ box-shadow: 0px 7px 21px 0 #dae0e5;
   transition: all ease-in-out 0.3s;
 }
 
-
-/* .contact-us-form .contact-us-wrapper .form-btn button:hover{
+.contact-us-form .contact-us-wrapper .form-btn button:hover{
   transform: translateY(-5px);
   background: var(--e-global-color-very-dark-blue);
   color: var(--e-global-color-secondary);
   border: 1px solid var(--e-global-color-very-dark-blue);
   transition: all ease-in-out 0.3s;
-} */
+}
+
 .contact-us-form .form-btn button i {
   margin-left: 41px;
   font-size: 20px;
@@ -1648,6 +1645,11 @@ box-shadow: 0px 7px 21px 0 #dae0e5;
   padding: 156px 0 154px;
   position: relative;
 }
+
+.footer-section .footer-left{
+  visibility: hidden;
+}
+
 .footer-outer-margin{
   position: relative;
 }
@@ -1664,7 +1666,7 @@ box-shadow: 0px 7px 21px 0 #dae0e5;
   font-weight: 400;
 }
 .footer-bar{
-  background: var(--e-global-color-blue-f);
+  background: var(--e-global-color-dark-blue2);
   padding:31px 0;
   position: relative;
 }

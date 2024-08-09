@@ -2,20 +2,14 @@
 import React, { useEffect } from 'react'
 import '../stylesheets/style.css'
 import Navbar from '../components/Navbar';
-import bannerImg from '../assets/images/autorix-banner-img.png';
-import bannerImg1 from '../assets/images/car-img-1.png';
-import bannerImg2 from '../assets/images/car-image.png';
-import bannerImg3 from '../assets/images/car-img-2.png';
-import BannerCarousel from '../components/BannerCarousel';
 import AOS from 'aos';
 import WhyChooseUs from '../components/HomeSections/WhyChooseUs';
 import Banner from '../components/HomeSections/Banner';
 import AboutUs from '../components/HomeSections/AboutUs';
 import Services from '../components/HomeSections/Services';
-import Mission from '../components/HomeSections/Mission';
-import Offers from '../components/HomeSections/Offers';
 import Team from '../components/HomeSections/Team';
-import Projects from '../components/HomeSections/Projects';
+import Contact from '../components/HomeSections/Contact';
+import Footer from '../components/HomeSections/Footer';
 
 const Home = () => {
     useEffect(() => {
@@ -30,12 +24,12 @@ const Home = () => {
                 <Navbar />
                 <Banner/>
             </div>  
-            <WhyChooseUs/>          
+            {/* <WhyChooseUs/>*/}
             <AboutUs/>
-            <Services/>
-            <Projects/>
-            <Mission/>
+            <Services/>         
             <Team/>
+            <Contact/>
+            <Footer/>
         </div>
     );
 };
