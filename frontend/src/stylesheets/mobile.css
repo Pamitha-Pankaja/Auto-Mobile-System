@@ -33,7 +33,7 @@
   padding: 18px 27px 18px 34px !important;
 }
 .main-header {
-  padding: 40px 260px 0px 320px;
+  padding: 0px 260px 0px 320px;
 }
 .about-us-section figure .about-center-img {
   margin-left:78px;
@@ -49,7 +49,7 @@
 
 @media screen and (max-width: 1850px) {
 .main-header {
-  padding: 40px 224px 0px 282px;
+  padding: 0px 224px 0px 282px;
 }
 .home-banner-section .banner-container-box .social-icons ul {
   left: -225px;
@@ -71,7 +71,7 @@
   top: 17px;
 }
 .main-header {
-  padding: 28px 200px 0 208px;
+  padding: 0px 200px 0 208px;
 }
 .about-us-section:before {
   right: 43%;
@@ -92,7 +92,7 @@
   top: 12px;
 }
 .main-header {
-  padding: 28px 150px 0 150px;
+  padding: 0px 150px 0 150px;
 }
 h1 {
   font-size: 60px;
@@ -117,7 +117,7 @@ h1 {
   padding-top: 62px;
 }
 .main-header {
-  padding: 28px 90px 0 120px;
+  padding: 0px 90px 0 120px;
 }
 .home-banner-section .banner-container-box .social-icons ul {
   left: -93px;
@@ -165,7 +165,7 @@ h1 {
   line-height: 56px;
 }
 .main-header {
-  padding: 28px 55px 0 110px;
+  padding: 0px 55px 0 110px;
 }
 .btn-talk a {
   padding: 17px 15px 17px 19px !important;
@@ -257,7 +257,7 @@ h1 {
  width: 955px;
 }
 .main-header {
-  padding: 28px 0px 0 98px;
+  padding: 0px 0px 0 98px;
 }
 /* our-mission */
 /* .mission-section .our-mission-figure-box {
@@ -282,7 +282,7 @@ h1 {
 
 @media screen and (max-width: 1250px) {
 .main-header {
-  padding: 28px 0px 0 78px;
+  padding: 0px 0px 0 78px;
 }
 .main-header .navbar-brand {
   margin-right:84px;
@@ -303,7 +303,7 @@ h1 {
   font-size: 14px;
 }
 .main-header {
-  padding: 28px 0px 0 78px;
+  padding: 0px 0px 0 78px;
 }
 .btn-talk {
   margin-left: 30px !important;
@@ -1060,6 +1060,8 @@ padding: 100px 0;
   height: 73%;
 }
 }
+
+
 @media only screen and (max-width: 991px) {
 .home-banner-section .home-banner-text {
     padding: 0px 0 513px 0px;
@@ -1093,7 +1095,7 @@ padding: 100px 0;
   width: 100%;
 }
 .main-header {
-  padding: 60px 30px 0 90px;
+  padding: 0px 30px 0 90px;
 }
 .home-banner-section .banner-img-outer {
   padding-top: 55px;
@@ -1185,9 +1187,7 @@ padding: 100px 0;
   transform: rotate(-45deg);
   transform-origin: 15% 100%;
 }
-.home-banner-section {
-  padding-top: 33px;
-}
+
 .about-banner-text {
   margin-bottom: 87px;
   padding-top: 40px;
@@ -2085,10 +2085,10 @@ h1 {
   padding: 0;
 }
 .main-header {
-  padding: 46px 30px 0 71px;
+  padding: 0px 30px 0 71px;
 }
 .home-banner-section {
-  padding-top: 54px;
+  padding-top: 88px;
   padding-left:0px;
 }
 .home-banner-section .banner-img-outer {
@@ -2951,7 +2951,7 @@ h2 {
 
 @media screen and (max-width: 575px) {
 .main-header {
-  padding: 40px 14px 0 40px;
+  padding: 0px 14px 0 40px;
 }
 .sub-header-section .sub-banner-section .banner-btn .about-margin:before {
   width: 40px;
@@ -2969,13 +2969,13 @@ h1 {
   line-height: 33px;
 }
 .home-banner-section {
-  padding-top: 54px;
+  padding-top: 88px;
 }
 .autorix-text:before {
   width: 25px;
   height: 19px;
   top: 0px;
-  left: -5%;
+  left:-5%;
   right: 0;
 }
 .autorix-text {
@@ -3847,5 +3847,10 @@ h5 {
 }
 .effect-image-1:hover .simple-overlay-3 {
   height: 78%;
+}
+
+/*auth*/
+.auth-container {
+  padding: 2rem;
 }
 }

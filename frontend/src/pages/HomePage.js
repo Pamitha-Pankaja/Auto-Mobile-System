@@ -10,6 +10,7 @@ import Services from '../components/HomeSections/Services';
 import Team from '../components/HomeSections/Team';
 import Contact from '../components/HomeSections/Contact';
 import Footer from '../components/HomeSections/Footer';
+import Appointment from './Appointment';
 
 const Home = () => {
     useEffect(() => {
@@ -20,8 +21,9 @@ const Home = () => {
     }, []);
     return (
         <div>
+            {/* <Navbar/> */}
             <div id='home' class="home-header-section">
-                <Navbar />
+                
                 <Banner/>
             </div>  
             {/* <WhyChooseUs/>*/}
