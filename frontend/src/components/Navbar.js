@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link as ScrollLink, Events, scrollSpy } from 'react-scroll';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/images/autorix-logo.png';
 import '../stylesheets/style.css';
 
 const Navbar = () => {
     const [activeLink, setActiveLink] = useState('home');
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -25,12 +26,24 @@ const Navbar = () => {
         };
 
         window.addEventListener('scroll', handleScroll);
-        scrollSpy.update(); // Update scrollSpy
+        scrollSpy.update();
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    const handleNavClick = (section) => {
+        if (location.pathname !== '/') {
+            // If not on the home page, navigate to the home page and then scroll to the section
+            return () => {
+                window.location.href = `/#${section}`;
+            };
+        } else {
+            // If already on the home page, use react-scroll to scroll smoothly
+            return null;
+        }
+    };
 
     return (
         <header className="header">
@@ -47,25 +60,67 @@ const Navbar = () => {
                             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul className="navbar-nav mr-0">
                                     <li className={`nav-item ${activeLink === 'home' ? 'active' : ''}`}>
-                                        <ScrollLink className="nav-link text-decoration-none navbar-text-color home-margin-top" to="home" smooth={true} duration={500}>Home</ScrollLink>
+                                        <ScrollLink
+                                            className="nav-link text-decoration-none navbar-text-color home-margin-top"
+                                            to="home"
+                                            smooth={true}
+                                            duration={500}
+                                            onClick={handleNavClick('home')}
+                                        >
+                                            Home
+                                        </ScrollLink>
                                     </li>
                                     <li className={`nav-item ${activeLink === 'about' ? 'active' : ''}`}>
-                                        <ScrollLink className="nav-link text-decoration-none navbar-text-color" to="about" smooth={true} duration={500}>About</ScrollLink>
+                                        <ScrollLink
+                                            className="nav-link text-decoration-none navbar-text-color"
+                                            to="about"
+                                            smooth={true}
+                                            duration={500}
+                                            onClick={handleNavClick('about')}
+                                        >
+                                            About
+                                        </ScrollLink>
                                     </li>      
                                     <li className={`nav-item ${activeLink === 'services' ? 'active' : ''}`}>
-                                        <ScrollLink className="nav-link text-decoration-none navbar-text-color" to="services" smooth={true} duration={500}>Services</ScrollLink>
+                                        <ScrollLink
+                                            className="nav-link text-decoration-none navbar-text-color"
+                                            to="services"
+                                            smooth={true}
+                                            duration={500}
+                                            onClick={handleNavClick('services')}
+                                        >
+                                            Services
+                                        </ScrollLink>
                                     </li>                          
                                     <li className={`nav-item ${activeLink === 'team' ? 'active' : ''}`}>
-                                        <ScrollLink className="nav-link text-decoration-none contact-us-margin navbar-text-color" to="team" smooth={true} duration={500}>Team</ScrollLink>
+                                        <ScrollLink
+                                            className="nav-link text-decoration-none contact-us-margin navbar-text-color"
+                                            to="team"
+                                            smooth={true}
+                                            duration={500}
+                                            onClick={handleNavClick('team')}
+                                        >
+                                            Team
+                                        </ScrollLink>
                                     </li>
                                     <li className={`nav-item ${activeLink === 'contact' ? 'active' : ''}`}>
-                                        <ScrollLink className="nav-link text-decoration-none contact-us-margin navbar-text-color" to="contact" smooth={true} duration={500}>Contact</ScrollLink>
+                                        <ScrollLink
+                                            className="nav-link text-decoration-none contact-us-margin navbar-text-color"
+                                            to="contact"
+                                            smooth={true}
+                                            duration={500}
+                                            onClick={handleNavClick('contact')}
+                                        >
+                                            Contact
+                                        </ScrollLink>
                                     </li>
                                 </ul>
                                 <div className="btn-talk ml-auto">
                                     <ul className="m-0 p-0">
                                         <li className="list-unstyled d-lg-inline-block">
-                                            <Link className="nav-link contact" to="/appointment">Get a Quote<i className="fa-solid fa-arrow-right"></i></Link> {/* Updated Link */}
+                                            <Link className="nav-link contact" to="/appointment">
+                                                Get a Quote<i className="fa-solid fa-arrow-right"></i>
+                                            </Link>
                                         </li>
                                     </ul>
                                 </div>
