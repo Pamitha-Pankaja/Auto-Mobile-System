@@ -65,7 +65,7 @@ const Navbar = () => {
                                 <div className="btn-talk ml-auto">
                                     <ul className="m-0 p-0">
                                         <li className="list-unstyled d-lg-inline-block">
-                                            <Link className="nav-link contact" to="/contact">Get a Quote<i className="fa-solid fa-arrow-right"></i></Link>
+                                            <Link className="nav-link contact" to="/appointment">Get a Quote<i className="fa-solid fa-arrow-right"></i></Link> {/* Updated Link */}
                                         </li>
                                     </ul>
                                 </div>

@@ -7,7 +7,7 @@ import teamBottomImg from '../../assets/images/teams-bottom-img.png';
 
 const Team= () => {
   return (
-    <section className="teams-section overflow-hidden">
+    <section id='team' className="teams-section overflow-hidden">
       <div className="container">
         <div className="row">
           <div className="col-lg-5 col-md-6 col-sm-12">
