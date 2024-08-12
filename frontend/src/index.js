@@ -12,6 +12,7 @@ import './stylesheets/style.css'
 import './stylesheets/mobile.css'
 
 import App from './App';
+import { AuthProvider } from './components/AuthForms/AuthContext';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 
@@ -20,7 +21,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter> {/* Wrap your app with BrowserRouter */}
-      <App />
+      <AuthProvider>
+        <App />
+      </AuthProvider>,
     </BrowserRouter>
   </React.StrictMode>
 );
