@@ -5,7 +5,7 @@ import { scroller } from 'react-scroll';
 import '../stylesheets/style.css'
 import Navbar from '../components/Navbar';
 import AOS from 'aos';
-import WhyChooseUs from '../components/HomeSections/WhyChooseUs';
+import WhyChooseUs from '../components/HomeSections/SubServices';
 import Banner from '../components/HomeSections/Banner';
 import AboutUs from '../components/HomeSections/AboutUs';
 import Services from '../components/HomeSections/Services';
