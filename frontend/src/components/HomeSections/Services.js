@@ -27,7 +27,7 @@ const Services = () => {
                             </figure>
                             <div className="our-services-content">
                                 <h5>ENGINE REPAIR</h5>
-                                <p>Autem velaum iure reare aenderit rui in ea roluptate esse ruam moles</p>
+                                <p>This can include things like replacing a head gasket or belt or sealing an oil pan.</p>
                                 <a href="aboutus.html">Read more</a>
                             </div>
                         </div>
@@ -38,8 +38,8 @@ const Services = () => {
                                 <img src={ourServiceImg2} alt="" className="img-fluid" />
                             </figure>
                             <div className="our-services-content">
-                                <h5>BRAKE REPAIR</h5>
-                                <p className="our-services-center-box">Autem velaum iure reare aenderit rui in ea roluptate esse ruam moles</p>
+                                <h5>VEHICLE SERVICES</h5>
+                                <p className="our-services-center-box">Service vehicle means a new or used vehicle which is used for purposes other than demonstration.</p>
                                 <a href="aboutus.html">Read more</a>
                             </div>
                         </div>
@@ -50,8 +50,8 @@ const Services = () => {
                                 <img src={ourServiceImg3} alt="" className="img-fluid" />
                             </figure>
                             <div className="our-services-content">
-                                <h5>TIRE REPAIR</h5>
-                                <p>Autem velaum iure reare aenderit rui in ea roluptate esse ruam moles</p>
+                                <h5>PAINTING REPAIR</h5>
+                                <p>Maintenance painting involves a lot more than just applying a fresh layer of paint.</p>
                                 <a href="aboutus.html">Read more</a>
                             </div>
                         </div>
@@ -64,7 +64,7 @@ const Services = () => {
                                 <img src={ourServiceImg4} alt="" className="img-fluid" />
                             </figure>
                             <div className="our-services-content">
-                                <h5>BATTERY REPAIR</h5>
+                                <h5>HYBRID REPAIR</h5>
                                 <p className="paragraph2">Autem velaum iure reare aenderit rui in ea roluptate esse ruam moles</p>
                                 <a href="aboutus.html">Read more</a>
                             </div>
@@ -83,8 +83,8 @@ const Services = () => {
                                 <img src={ourServiceImg6} alt="" className="img-fluid" />
                             </figure>
                             <div className="our-services-content steering-margin-bottom">
-                                <h5>STEERING REPAIR</h5>
-                                <p className="paragraph2">Autem velaum iure reare aenderit rui in ea roluptate esse ruam moles</p>
+                                <h5>ACCIDENT REPAIR</h5>
+                                <p className="paragraph2">Accident repair involves restoring vehicles that have been damaged in accidents</p>
                                 <a href="aboutus.html">Read more</a>
                             </div>
                         </div>

@@ -14,8 +14,8 @@ const Team= () => {
             <div className="teams-content">
               <h6 className="autorix-text teams-text" data-aos="flip-up">Mechanics we have</h6>
               <h2>Our Expert Team members</h2>
-              <p className="teams-p1" data-aos="fade-left">Duis autem vel eum iure reprehenderit velit esse quam nihil molestiae conseuaeu dolorem eum fugiat ruo euia ruo voluptas nulla pariatur.</p>
-              <p className="teams-p2" data-aos="fade-right">Reprehenderit qui in ea volu velit essestia consequatu vel illum eui minima veniam</p>
+              <p className="teams-p1" data-aos="fade-left">At our service station, our expert team is dedicated to providing top-notch care and attention to your vehicle. With years of industry experience and a commitment to excellence, our skilled professionals are trained to handle all your automotive needs.</p>
+              <p className="teams-p2" data-aos="fade-right">From routine maintenance to complex repairs, we pride ourselves on delivering exceptional service with a focus on quality, efficiency, and customer satisfaction. Trust our experts to keep your vehicle running smoothly and safely.</p>
               <div className="banner-btn discover-btn-banner" data-aos="fade-up">
                 <a href="our-team.html" className="text-decoration-none">View All members <i className="fa-solid fa-arrow-right"></i></a>
               </div>
@@ -40,7 +40,7 @@ const Team= () => {
                     </ul>
                   </div>
                   <h6 className="title">Founder</h6>
-                  <h5 className="desc">Kevin James</h5>
+                  <h5 className="desc">Pamitha Lokuge</h5>
                 </div>
               </div>
               <div className="col-lg-6 col-md-6 col-sm-6">
@@ -58,8 +58,8 @@ const Team= () => {
                       <li className="social-icons-outer4"><a href="#"><img src="./assets/images/text-bars.png" alt="" /></a></li>
                     </ul>
                   </div>
-                  <h6 className="title">CEO</h6>
-                  <h5 className="desc">Rene Luckey</h5>
+                  <h6 className="title">TECHNICIAN</h6>
+                  <h5 className="desc">Yeran Fernando</h5>
                 </div>
               </div>
             </div>
@@ -99,7 +99,7 @@ const Team= () => {
                     </ul>
                   </div>
                   <h6 className="title">Worker</h6>
-                  <h5 className="desc">Brian Rooney</h5>
+                  <h5 className="desc">Kusal Mendis</h5>
                 </div>
               </div>
             </div>
