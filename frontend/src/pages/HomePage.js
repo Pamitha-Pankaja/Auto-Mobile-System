@@ -51,7 +51,7 @@ const Home = () => {
             <section id="contact">
                 <Contact />
             </section>
-            <Footer />
+            <Footer className="overflowY"/>
         </div>
     );
 };

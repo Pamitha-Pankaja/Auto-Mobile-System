@@ -45,6 +45,7 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
 h1 {
   font-size: 64px;
   line-height: 70px;
@@ -120,9 +121,9 @@ a {
   text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
-  font-weight: 400;
-  
+  font-weight: 400; 
 }
+
 .navbar-light .navbar-nav .nav-link {
   color: white;
   padding-left:0px;
@@ -3230,7 +3231,7 @@ input[type="number"]::-webkit-calendar-picker-indicator {
 /*Auth Page*/
 /* Auth Page CSS */
 .auth-container {
-  background: url('../assets/images/offer-section-background.jpg') no-repeat center center fixed;
+  background: url('../assets/images/offer-section-background.jpg') no-repeat fixed;
   background-size: cover;
   background-repeat: no-repeat;
 }
