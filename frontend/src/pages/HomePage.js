@@ -1,9 +1,6 @@
 // src/components/Home.js
 import React, { useEffect } from 'react'
-import { useLocation } from 'react-router-dom';
-import { scroller } from 'react-scroll';
 import '../stylesheets/style.css'
-import Navbar from '../components/Navbar';
 import AOS from 'aos';
 import WhyChooseUs from '../components/HomeSections/SubServices';
 import Banner from '../components/HomeSections/Banner';
@@ -21,19 +18,7 @@ const Home = () => {
             once: true, // Whether animation should happen only once
         });
     }, []);
-
-    const location = useLocation();
-
-    useEffect(() => {
-        if (location.hash) {
-            const sectionId = location.hash.replace('#', '');
-            scroller.scrollTo(sectionId, {
-                duration: 200,
-                delay: 0,
-                smooth: 'easeInOutQuart'
-            });
-        }
-    }, [location]);
+    
     return (
         <div>
             <section id="home" class="home-header-section">

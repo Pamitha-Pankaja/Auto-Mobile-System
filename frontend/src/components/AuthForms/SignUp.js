@@ -69,35 +69,35 @@ const SignUp = ({ toggleForm }) => {
 
 
   return (
-    <div className="auth-card card p-4 shadow-lg" data-aos="fade-up" style={{ maxWidth: '400px', width: '100%' }}>
+    <div className="auth-card card mt-3 p-2 shadow-lg" data-aos="fade-up" style={{ maxWidth: '400px', width: '100%' }}>
       <div className="card-body">
         <h2 className="card-title text-center mb-4">Sign Up</h2>
         <form onSubmit={handleSubmit}>
-          <div className="form-group mb-3" data-aos="fade-right">
+          <div className="form-group mb-2" data-aos="fade-right">
             <label htmlFor="username">Username</label>
             <input type="text" className="form-control" id="username" placeholder="Enter username"  value={formData.username} onChange={handleChange}  required />
           </div>
         
-          <div className="form-group mb-3" data-aos="fade-right">
+          <div className="form-group mb-2" data-aos="fade-right">
             <label htmlFor="email">Email address</label>
             <input type="email" className="form-control" id="email" placeholder="Enter email"  value={formData.email} onChange={handleChange}  required />
           </div>
 
-          <div className="form-group mb-3" data-aos="fade-right">
+          <div className="form-group mb-2" data-aos="fade-right">
             <label htmlFor="phoneNumber">Phone Number</label>
             <input type="number" className="form-control" id="phoneNumber" placeholder="Phone Number"value={formData.phoneNumber} onChange={handleChange} required />
           </div>
 
-          <div className="form-group mb-4" data-aos="fade-right">
+          <div className="form-group mb-2" data-aos="fade-right">
             <label htmlFor="password">Password</label>
             <input type="password" className="form-control" id="password" placeholder="Password"  value={formData.password} onChange={handleChange} required />
           </div>
-          <div className="form-group mb-4" data-aos="fade-right">
+          <div className="form-group mb-2" data-aos="fade-right">
             <label htmlFor="confirmPassword">Confirm Password</label>
             <input type="password" className="form-control" id="confirmPassword" placeholder="Confirm Password" value={formData.confirmPassword} onChange={handleChange} required />
           </div>
           <button type="submit" className="btn btn-primary btn-block" data-aos="fade-right">Sign Up</button>
-          <div className="text-center mt-3" data-aos="fade-right">
+          <div className="text-center mt-2" data-aos="fade-right">
             <span>Already have an account? <a href="#" className="toggle-form" onClick={toggleForm}>Sign In</a></span>
           </div>
         </form>
