@@ -22,8 +22,6 @@ Project: Autorix
 
 body {
   font-family: 'Chakra Petch', sans-serif;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 :root {
   --e-global-color-primary: #262626;
@@ -90,6 +88,11 @@ a {
   font-size: 18px;
   line-height: 18px;
   font-weight: 400;
+}
+
+.main-container{
+    max-height: 100%; /* Set the maximum height (e.g., 600px) */
+    overflow-y: hidden; /* Enable vertical scrolling if content overflows */
 }
 
 /****** headerm and banner section******/
@@ -348,10 +351,41 @@ a {
   margin-left: 15%;
   list-style: none;
 }
+
+
 /* whychoose-section */
 .whychoose-section{
-  padding: 100px 0 110px;
+  padding: 150px 0 110px;
 }
+
+/* Custom arrow styles for react-slick */
+.whychoose-section .slick-prev, .slick-next {
+  color: black;
+  z-index: 1;
+}
+
+.whychoose-section .slick-prev::before, .slick-next::before {
+  color: black;  
+}
+
+.whychoose-section .images-blog {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+}
+
+.whychoose-section .images-blog figure {
+  margin: 0;
+  width: 100%; 
+}
+
+.images-blog img {
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+  display: block;
+}
+
 .whychoose-section h2{
   padding: 0 232px;
   text-transform: uppercase;
@@ -359,7 +393,7 @@ a {
   color: var(--e-global-color-primary);
 }
 
-.text-icon {
+.whychoose-section .text-icon {
   margin-right: 10px;
 }
 
@@ -508,6 +542,8 @@ nav.fill ul li a:after {
   opacity: 1;
   transition: all ease-in-out 1s;
 }
+
+
 /* Keyframes */
 @-webkit-keyframes fill {
   0% {
@@ -555,6 +591,7 @@ nav.fill ul li a:after {
   -webkit-animation: mover 1s infinite  alternate;
   animation: mover 1s infinite  alternate;
 }
+
 @-webkit-keyframes mover {
   0% { transform: translateY(0); }
   100% { transform: translateY(-10px); }

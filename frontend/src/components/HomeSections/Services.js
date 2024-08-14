@@ -1,14 +1,20 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import textIcon from '../../assets/images/whychoose-bars.png';
-import ourServiceImg1 from '../../assets/images/our-services-img1.png'; // Adjust the path as necessary
+import ourServiceImg1 from '../../assets/images/our-services-img1.png'; 
 import ourServiceImg2 from '../../assets/images/our-services-img2.png';
 import ourServiceImg3 from '../../assets/images/our-services-img3.png';
 import ourServiceImg4 from '../../assets/images/our-services-img4.png';
-import ourServiceImg5 from '../../assets/images/our-services-img5.png';
 import ourServiceImg6 from '../../assets/images/our-services-img6.png';
 import ourServiceCar from '../../assets/images/our-services-car-img.png';
 
 const Services = () => {
+    const navigate = useNavigate();
+
+    const handleReadMore = (id) => {
+        navigate('/services', { state: { categoryId: id } });
+    };
+
     return (
         <section id='services' className="our-services-section overflow-hidden">
             <div className="container">
@@ -28,7 +34,7 @@ const Services = () => {
                             <div className="our-services-content">
                                 <h5>ENGINE REPAIR</h5>
                                 <p>This can include things like replacing a head gasket or belt or sealing an oil pan.</p>
-                                <a href="aboutus.html">Read more</a>
+                                <button onClick={() => handleReadMore(1)} className="btn btn-link text-decoration-none">Read more</button>
                             </div>
                         </div>
                     </div>
@@ -40,7 +46,7 @@ const Services = () => {
                             <div className="our-services-content">
                                 <h5>VEHICLE SERVICES</h5>
                                 <p className="our-services-center-box">Service vehicle means a new or used vehicle which is used for purposes other than demonstration.</p>
-                                <a href="aboutus.html">Read more</a>
+                                <button onClick={() => handleReadMore(2)} className="btn btn-link text-decoration-none">Read more</button>
                             </div>
                         </div>
                     </div>
@@ -52,7 +58,7 @@ const Services = () => {
                             <div className="our-services-content">
                                 <h5>PAINTING REPAIR</h5>
                                 <p>Maintenance painting involves a lot more than just applying a fresh layer of paint.</p>
-                                <a href="aboutus.html">Read more</a>
+                                <button onClick={() => handleReadMore(3)} className="btn btn-link text-decoration-none">Read more</button>
                             </div>
                         </div>
                     </div>
@@ -66,7 +72,7 @@ const Services = () => {
                             <div className="our-services-content">
                                 <h5>HYBRID REPAIR</h5>
                                 <p className="paragraph2">Autem velaum iure reare aenderit rui in ea roluptate esse ruam moles</p>
-                                <a href="aboutus.html">Read more</a>
+                                <button onClick={() => handleReadMore(4)} className="btn btn-link text-decoration-none">Read more</button>
                             </div>
                         </div>
                     </div>
@@ -85,7 +91,7 @@ const Services = () => {
                             <div className="our-services-content steering-margin-bottom">
                                 <h5>ACCIDENT REPAIR</h5>
                                 <p className="paragraph2">Accident repair involves restoring vehicles that have been damaged in accidents</p>
-                                <a href="aboutus.html">Read more</a>
+                                <button onClick={() => handleReadMore(6)} className="btn btn-link text-decoration-none">Read more</button>
                             </div>
                         </div>
                     </div>

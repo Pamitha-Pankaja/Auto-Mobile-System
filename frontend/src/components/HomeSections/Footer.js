@@ -7,7 +7,7 @@ import footerLeftBarImg from "../../assets/images/footer-bar-left.png"
 const Footer = () => {
     return (
         <div>
-            <div className="footer-section">
+            <div className=".main-container footer-section">
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-3 col-lg-4 col-md-3 col-sm-6 d-xl-block d-none"></div>

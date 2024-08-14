@@ -20,7 +20,7 @@ const Home = () => {
     }, []);
     
     return (
-        <div>
+        <div className='main-container'>
             <section id="home" class="home-header-section">
                 <Banner />
             </section>
@@ -36,7 +36,7 @@ const Home = () => {
             <section id="contact">
                 <Contact />
             </section>
-            <Footer className="overflowY"/>
+            <Footer className="overflow-hidden"/>
         </div>
     );
 };
