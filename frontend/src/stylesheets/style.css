@@ -144,6 +144,10 @@ a {
 .nav-link {
   cursor: pointer; /* Ensure cursor is set to pointer */
 }
+.navbar-text{
+  color: white;
+  text-transform: uppercase;
+}
 
 .main-header {
   padding: 0px 265px 0px 360px;
