@@ -1288,15 +1288,21 @@ h1 {
 .home-banner-text {
   padding: 43px 12px 36px 9px;
 }
+.btn-login{
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;  
+  padding:0px 12px 10px !important;
+}
 .btn-talk a {
   background: transparent;
   line-height: 21px;
   font-size: 16px;
-  padding:0 20px 10px !important;
+  padding:6px 20px 10px !important;
   font-weight: 400;
   text-decoration: none;
   text-align: left;
-  text-transform: uppercase;
   border: none;
   transition: all ease-in-out 0.3s;
 }

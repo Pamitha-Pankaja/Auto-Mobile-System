@@ -95,7 +95,7 @@ a {
     overflow-y: hidden; /* Enable vertical scrolling if content overflows */
 }
 
-/****** headerm and banner section******/
+/****** header and banner section******/
 .navbar{
     background-color: rgba(13, 15, 40, 0.571); 
     transition: background-color 0.3s ease;
@@ -139,7 +139,6 @@ a {
   padding-left:0px;
   padding-right: 0;
   position: relative;
-  
 }
 .nav-link {
   cursor: pointer; /* Ensure cursor is set to pointer */
@@ -155,6 +154,12 @@ a {
 }
 .home-banner-text {
   padding: 0px 0 193px 0;
+}
+.btn-login{
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 .btn-login a {
   background: var(--e-global-color-blue-f);
@@ -188,7 +193,6 @@ a {
   font-weight: 700;
   text-decoration: none;
   text-align: center;
-  text-transform: uppercase;
   border: 1px solid var(--e-global-color-accent);
   transition: all ease-in-out 0.3s;
 }
