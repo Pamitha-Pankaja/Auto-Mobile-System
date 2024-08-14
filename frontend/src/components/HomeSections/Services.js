@@ -110,7 +110,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import textIcon from '../../assets/images/whychoose-bars.png';
-import ourServiceImg1 from '../../assets/images/our-services-img1.png'; 
+import ourServiceImg1 from '../../assets/images/our-services-img1.png';
 import ourServiceImg2 from '../../assets/images/our-services-img2.png';
 import ourServiceImg3 from '../../assets/images/our-services-img3.png';
 import ourServiceImg4 from '../../assets/images/our-services-img4.png';
@@ -145,30 +145,86 @@ const Services = () => {
                         </h6>
                         <h2 className="text-center" data-aos="fade-zoom-in">We Provide Great Services For your Vehicle</h2>
                     </div>
-                    {categories.slice(0, 5).map((category, index) => (
-                        <div key={category.id} className="col-lg-4 col-md-4 col-sm-6">
-                            <div className={`our-services-outer ${index === 0 ? 'our-services-outer1 our-services-left-img' : ''} ${index === 2 ? 'our-services-outer1 our-services-right-img' : ''}`}>
+
+                    {categories[0] && (
+                        <div key={categories[0].id} className="col-lg-4 col-md-4 col-sm-6">
+                            <div className="our-services-outer our-services-outer1 our-services-left-img">
                                 <figure className="our-services-figure mb-0" data-aos="flip-left">
-                                    <img src={categoryImages[index]} alt="" className="img-fluid" />
+                                    <img src={categoryImages[0]} alt="" className="img-fluid" />
                                 </figure>
                                 <div className="our-services-content">
-                                    <h5>{category.name.toUpperCase()}</h5>
-                                    {/* <p>This can include things like replacing a head gasket or belt or sealing an oil pan.</p> */}
-                                    <button onClick={() => handleReadMore(category.id)} className="btn btn-link text-decoration-none">Read more</button>
+                                    <h5>{categories[0].name.toUpperCase()}</h5>
+                                    <button onClick={() => handleReadMore(categories[0].id)} className="btn btn-link text-decoration-none">Read more</button>
                                 </div>
                             </div>
                         </div>
-                    ))}
+                    )}
+                    {categories[1] && (
+                        <div key={categories[1].id} className="col-lg-4 col-md-4 col-sm-6">
+                            <div className="our-services-outer">
+                                <figure className="our-services-figure mb-0" data-aos="flip-left">
+                                    <img src={categoryImages[0]} alt="" className="img-fluid" />
+                                </figure>
+                                <div className="our-services-content">
+                                    <h5>{categories[1].name.toUpperCase()}</h5>
+                                    <button onClick={() => handleReadMore(categories[1].id)} className="btn btn-link text-decoration-none">Read more</button>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                    {categories[2] && (
+                        <div key={categories[2].id} className="col-lg-4 col-md-4 col-sm-6">
+                            <div className="our-services-outer our-services-outer1 our-services-right-img">
+                                <figure className="our-services-figure mb-0" data-aos="flip-left">
+                                    <img src={categoryImages[2]} alt="" className="img-fluid" />
+                                </figure>
+                                <div className="our-services-content">
+                                    <h5>{categories[2].name.toUpperCase()}</h5>
+                                    <button onClick={() => handleReadMore(categories[2].id)} className="btn btn-link text-decoration-none">Read more</button>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
                 <div className="row">
+                    {categories[3] && (
+                        <div key={categories[3].id} className="col-lg-3 col-md-4 col-sm-6">
+                            <div className="our-services-outer">
+                                <figure className="our-services-figure mb-0" data-aos="flip-left">
+                                    <img src={categoryImages[3]} alt="" className="img-fluid" />
+                                </figure>
+                                <div className="our-services-content">
+                                    <h5>{categories[3].name.toUpperCase()}</h5>
+                                    <button onClick={() => handleReadMore(categories[3].id)} className="btn btn-link text-decoration-none">Read more</button>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Car image section */}
                     <div className="col-lg-6 col-md-4 col-sm-4 d-md-block d-none">
                         <div className="our-services-outer position-relative" data-aos="fade-down-left">
                             <figure className="our-services-car-img mb-0 left_icon">
-                                <img src={ourServiceCar} alt="" />
+                                <img src={ourServiceCar} alt="Car" />
                             </figure>
                         </div>
                     </div>
+
+                    {categories[4] && (
+                        <div key={categories[4].id} className="col-lg-3 col-md-4 col-sm-6">
+                            <div className="our-services-outer">
+                                <figure className="our-services-figure mb-0" data-aos="flip-left">
+                                    <img src={categoryImages[4]} alt="" className="img-fluid" />
+                                </figure>
+                                <div className="our-services-content steering-margin-bottom">
+                                    <h5>{categories[4].name.toUpperCase()}</h5>
+                                    <button onClick={() => handleReadMore(categories[4].id)} className="btn btn-link text-decoration-none">Read more</button>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
+
                 <div className="banner-btn discover-btn-banner text-center">
                     <a href="services.html" className="text-decoration-none">View All services <i className="fa-solid fa-arrow-right"></i></a>
                 </div>
