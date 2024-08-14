@@ -111,17 +111,17 @@ const Navbar = () => {
                                             Contact
                                         </ScrollLink>
                                     </li>
-                                    <div className="btn-talk ml-auto">
-                                        <ul className="m-0 p-0">
-                                            <li className="list-unstyled d-lg-inline-block">
-                                                <Link className="nav-link" to="/appointment">
-                                                    Book Now<i className="fa-solid fa-arrow-right"></i>
-                                                </Link>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </ul>
 
+                                </ul>
+                                <div className="btn-talk ml-auto">
+                                    <ul className="m-0 p-0">
+                                        <li className="list-unstyled d-lg-inline-block">
+                                            <Link className="nav-link" to="/appointment">
+                                                Book Now<i className="fa-solid fa-arrow-right"></i>
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
                                 <div className="btn-login ml-auto d-flex align-items-center">
                                     {state.user ? (
                                         <>
