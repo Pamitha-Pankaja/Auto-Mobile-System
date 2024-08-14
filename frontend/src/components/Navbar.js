@@ -26,11 +26,11 @@ const Navbar = () => {
 
     useEffect(() => {
         if (location.pathname === '/' || location.pathname === '/services') {
-          document.body.style.overflowY = 'auto';
-        } else{
-          document.body.style.overflowY = 'hidden'; 
+            document.body.style.overflowY = 'auto';
+        } else {
+            document.body.style.overflowY = 'hidden';
         }
-      }, [location.pathname]);
+    }, [location.pathname]);
 
     const handleNavClick = (section) => {
         setActiveLink(section);
@@ -107,16 +107,17 @@ const Navbar = () => {
                                         </ScrollLink>
                                     </li>
                                 </ul>
-                                <div className="ml-auto d-flex align-items-center">
-                                    <div className="btn-talk ml-auto">
-                                        <ul className="m-0 p-0">
-                                            <li className="list-unstyled d-lg-inline-block">
-                                                <Link className="nav-link contact" to="/appointment">
-                                                    Book Now<i className="fa-solid fa-arrow-right"></i>
-                                                </Link>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <div className="btn-talk ml-auto">
+                                    <ul className="m-0 p-0">
+                                        <li className="list-unstyled d-lg-inline-block">
+                                            <Link className="nav-link" to="/appointment">
+                                                Book Now<i className="fa-solid fa-arrow-right"></i>
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className="btn-login ml-auto d-flex align-items-center justify-content-end navbar-end">
+
                                     {state.user ? (
                                         <>
                                             <span className="navbar-text mr-3">Hello, {state.user.username}</span>
@@ -125,11 +126,18 @@ const Navbar = () => {
                                             </button>
                                         </>
                                     ) : (
-                                        <Link to="/signin" className="btn btn-outline-primary">
-                                            Login
-                                        </Link>
+                                        <div className="ml-auto">
+                                            <ul className="m-0 p-0">
+                                                <li className="list-unstyled d-lg-inline-block">
+                                                    <Link to="/signin" className="btn btn-outline-primary">
+                                                        Sign In
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     )}
                                 </div>
+
                             </div>
                         </div>
                     </nav>
