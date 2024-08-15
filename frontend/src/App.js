@@ -1,17 +1,19 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Home from './pages/HomePage';
-import AdminDashboard from './pages/AdminDashboard';
 import AuthPage from './pages/AuthPage';
 import Appointment from './pages/Appointment';
 import Navbar from './components/Navbar';
 import SubServices from './components/HomeSections/SubServices';
+import AdminDashboard from './pages/AdminDashboard';
 
 const App = () => {
-  
+  const location = useLocation();
+  const showNavbar = location.pathname !== '/dashboard';
+
   return (
     <div className="App">
-      <Navbar />
+      {showNavbar && <Navbar />}
       <div className="content">
         <Routes>
           <Route path="/" element={<Home />} />

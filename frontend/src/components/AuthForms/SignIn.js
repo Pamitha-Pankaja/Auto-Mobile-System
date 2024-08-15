@@ -55,8 +55,14 @@ const SignIn = ({ toggleForm }) => {
           },
         });
         alert("Login successful!");
-        navigate('/');
-        // You can store the JWT token or perform a redirect here
+
+        // Check if the user has the "ROLE_ADMIN" role
+        if (result.roles.includes('ROLE_ADMIN')) {
+          navigate('/dashboard'); 
+        } else {
+          navigate('/'); 
+        }
+        
         console.log(result); // handle the response data as needed
       } else {
         const result = await response.json();

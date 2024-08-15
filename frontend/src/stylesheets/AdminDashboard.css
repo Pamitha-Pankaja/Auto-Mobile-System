@@ -1,61 +1,368 @@
-.admin-dashboard {
-    padding: 20px;
-  }
- 
-  .admin-dashboard h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
- 
-  .admin-dashboard table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-  }
- 
-  .admin-dashboard th,
-  .admin-dashboard td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-  }
- 
-  .admin-dashboard th {
-    background-color: #f4f4f4;
-  }
- 
-  .admin-dashboard .status-button {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: white;
-  }
- 
-  .admin-dashboard .status-button.pending {
-    background-color: #ffc107; /* Yellow for pending */
-  }
- 
-  .admin-dashboard .status-button.approved {
-    background-color: #28a745; /* Green for approved */
-  }
- 
-  .admin-dashboard .status-button.pending:hover {
-    background-color: #e0a800; /* Darker yellow for hover */
-  }
- 
-  .admin-dashboard .status-button.approved:hover {
-    background-color: #218838; /* Darker green for hover */
-  }
- 
-  /* Additional styles for the confirmation dialog */
-  .react-confirm-alert-overlay {
-    background: rgba(0, 0, 0, 0.5);
-  }
- 
-  .react-confirm-alert-body {
-    border-radius: 10px;
-    padding: 20px;
-  }
+/*DashboardNav css*/
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  background: #343a40;
+  color: #fff;
+}
+
+.sidebar .nav-item {
+  marker-start: none;
+}
+
+.sidebar .nav-link {
+  color: #adb5bd;
+}
+
+.sidebar .nav-link.active {
+  background: #495057;
+  color: #fff;
+}
+
+.sidebar .nav-link:hover {
+  background: #495057;
+  color: #fff;
+}
+
+.sidebar .nav-link i {
+  margin-right: 10px;
+}
+
+.sidebar .collapse .nav-link {
+  padding-left: 30px;
+}
+
+.btn {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar .collapse ul {
+  list-style-type: none;
+  padding-left: 0; 
+  margin-left: 0;
+}
+
+/*Appointment dashboard css*/
+.appointment-dashboard {
+  padding: 20px;
+}
+.appointment-dashboard h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 3rem;
+}
+.table-responsive {
+  margin-top: 20px;
+}
+.table thead th {
+  white-space: nowrap;
+  font-size: 1.1rem;
+}
+.table tbody td {
+  white-space: nowrap;
+  font-size: 1rem;
+  padding: 15px;
+}
+.table tbody tr {
+  margin-bottom: 10px;
+}
+.table .btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+}
+.table .btn-warning {
+  background-color: #ffc107; /* Yellow for pending */
+}
+.table .btn-success {
+  background-color: #28a745; /* Green for approved */
+}
+.table .btn-warning:hover {
+  background-color: #e0a800; /* Darker yellow for hover */
+}
+.table .btn-success:hover {
+  background-color: #218838; /* Darker green for hover */
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.pagination .btn {
+  margin: 0 5px;
+  font-size: 1rem;
+}
+.pagination .btn-primary {
+  background-color: #007bff;
+}
+.pagination .btn-secondary {
+  background-color: #6c757d;
+}
+.pagination .btn:hover {
+  background-color: #0056b3; /* Darker blue for hover */
+}
+
+/* Additional styles for the confirmation dialog */
+.react-confirm-alert-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.react-confirm-alert-body {
+  background: white;
+  border-radius: 15px; /* Rounded corners */
+  padding: 30px; /* Increased padding */
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+  text-align: center;
+  font-family: 'Arial', sans-serif; /* Custom font */
+}
+.react-confirm-alert-body h1 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #333; /* Darker text color */
+}
+.react-confirm-alert-body p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #555; /* Slightly lighter text color */
+}
+.react-confirm-alert-button-group {
+  display: flex;
+  justify-content: space-around;
+}
+.react-confirm-alert-button-group button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold; /* Bold text */
+}
+.react-confirm-alert-button-group button:first-child {
+  background-color: #28a745; /* Green for Yes */
+  color: white;
+}
+.react-confirm-alert-button-group button:first-child:hover {
+  background-color: #218838; /* Darker green for hover */
+}
+.react-confirm-alert-button-group button:last-child {
+  background-color: #dc3545; /* Red for No */
+  color: white;
+}
+.react-confirm-alert-button-group button:last-child:hover {
+  background-color: #c82333; /* Darker red for hover */
+}
 
 
+
+/*Service Dashboard css*/
+.services-dashboard {
+  padding: 20px;
+}
+.services-dashboard h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.table-responsive {
+  margin-top: 20px;
+}
+
+.table thead th {
+  white-space: nowrap;
+}
+
+.table tbody td {
+  white-space: nowrap;
+}
+
+.table .btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.table .btn-warning {
+  background-color: #ffc107; /* Yellow for pending */
+}
+
+.table .btn-success {
+  background-color: #28a745; /* Green for approved */
+}
+
+.table .btn-warning:hover {
+  background-color: #e0a800; /* Darker yellow for hover */
+}
+
+.table .btn-success:hover {
+  background-color: #218838; /* Darker green for hover */
+}
+
+/* Additional styles for the modal */
+.modal-dialog {
+  max-width: 600px;
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header .close {
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-body {
+  margin-bottom: 20px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*Service Categories Dashboard css*/
+.service-categories-dashboard {
+  padding: 20px;
+}
+
+.service-categories-dashboard h1 {
+  margin-bottom: 20px;
+}
+
+.service-categories-dashboard .btn {
+  margin-bottom: 10px;
+}
+
+.service-categories-dashboard .table {
+  width: 100%;
+}
+
+.service-categories-dashboard .modal {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.service-categories-dashboard .modal-dialog {
+  max-width: 500px;
+  margin: 1.75rem auto;
+}
+
+.service-categories-dashboard .modal-content {
+  padding: 20px;
+}
+
+.service-categories-dashboard .modal-header {
+  border-bottom: none;
+}
+
+.service-categories-dashboard .modal-footer {
+  border-top: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-categories-dashboard .modal-footer .btn {
+  min-width: 100px;
+}
+
+/*Side Bar css*/
+.sidebar {
+  height: 100vh;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  background: #343a40;
+  color: #fff;
+  padding-top: 1rem;
+}
+
+.sidebar .nav-link {
+  color: #adb5bd;
+  padding: 1rem;
+  transition: 0.3s, color 0.3s;
+}
+
+.sidebar .nav-link.active {
+  background: #495057;
+  color: #fff;
+  font-weight: bold;
+}
+
+.sidebar .nav-link:hover {
+  background: #495057;
+  color: #fff;
+}
+
+.sidebar .nav-link i {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.sidebar .collapse .nav-link {
+  padding-left: 2.5rem;
+}
+
+.sidebar .nav-item {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar .nav-link:before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 100%;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+.sidebar .nav-link.active:before {
+  background-color: #007bff;
+}
+
+.sidebar .nav-link:hover:before {
+  background-color: #007bff;
+}
+
+.position-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding-top: 1rem;
+}
+
+.pt-3 {
+  padding-top: 1rem !important;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    padding: 1rem;
+  }
+
+  .sidebar .nav-link {
+    padding: 0.75rem;
+  }
+
+  .sidebar .nav-link i {
+    margin-right: 8px;
+  }
+
+  .sidebar .collapse .nav-link {
+    padding-left: 2rem;
+  }
+}

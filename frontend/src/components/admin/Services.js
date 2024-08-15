@@ -172,7 +172,6 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './ServicesDashboard.css';
 
 const ServicesDashboard = () => {
   const [services, setServices] = useState([]);
