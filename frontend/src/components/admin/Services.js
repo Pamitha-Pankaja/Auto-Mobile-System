@@ -233,11 +233,12 @@ const ServicesDashboard = () => {
       cost: service.cost,
       timePeriod: service.timePeriod,
       slots: service.slots,
-      categoryId: service.category.id,
-      fixedTimeSlots: service.fixedTimeSlots,
+      categoryId: service.category?.id || '',
+      fixedTimeSlots: service.fixedTimeSlots || [], // Ensure it's an array
     });
     handleShow();
   };
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
