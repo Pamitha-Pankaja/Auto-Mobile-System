@@ -55,11 +55,13 @@ const ServiceCategoriesDashboard = () => {
   };
 
   return (
-    <div className="service-categories-dashboard">
-      <h1 className="mt-4 text-center">Service Categories Dashboard</h1>
-      <button className="btn btn-primary my-3" onClick={handleShow}>
-        Add Category
-      </button>
+    <div className="container-fluid p-0">
+      <h1>Service Categories Dashboard</h1>
+      <div className="d-flex justify-content-end">
+        <button className="btn btn-add my-2 mx-4" onClick={handleShow}>
+          Add Category
+        </button>
+      </div>
       <div className="table-responsive">
         <table className="table table-striped">
           <thead>
@@ -75,11 +77,11 @@ const ServiceCategoriesDashboard = () => {
                 <td>{category.id}</td>
                 <td>{category.name}</td>
                 <td>
-                  <button className="btn btn-warning btn-sm" onClick={() => handleEdit(category)}>
+                  <button className="btn btn-edit btn-sm" onClick={() => handleEdit(category)}>
                     Edit
                   </button>
                   {' '}
-                  <button className="btn btn-danger btn-sm" onClick={() => handleDelete(category.id)}>
+                  <button className="btn btn-delete btn-sm" onClick={() => handleDelete(category.id)}>
                     Delete
                   </button>
                 </td>
@@ -114,10 +116,10 @@ const ServiceCategoriesDashboard = () => {
                   </div>
                 </div>
                 <div className="modal-footer">
-                  <button type="button" className="btn btn-secondary" onClick={handleClose}>
-                    Close
+                  <button type="button" className="btn btn-cancel" onClick={handleClose}>
+                    Cancel
                   </button>
-                  <button type="submit" className="btn btn-primary">
+                  <button type="submit" className="btn btn-save">
                     Save Changes
                   </button>
                 </div>

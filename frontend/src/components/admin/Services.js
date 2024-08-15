@@ -261,10 +261,12 @@ const ServicesDashboard = () => {
 
   return (
     <div className="services-dashboard">
-      <h1 className="mt-4 text-center">Services Dashboard</h1>
-      <button className="btn btn-primary my-3" onClick={handleShow}>
-        Add Service
-      </button>
+      <h1>Services Dashboard</h1>
+      <div className="d-flex justify-content-end">
+        <button className="btn btn-add my-2 mx-4" onClick={handleShow}>
+          Add Service
+        </button>
+      </div>
       <div className="table-responsive">
         <table className="table table-striped">
           <thead>
@@ -284,11 +286,11 @@ const ServicesDashboard = () => {
                 <td>{service.description}</td>
                 <td>{service.cost}</td>
                 <td>
-                  <button className="btn btn-warning btn-sm" onClick={() => handleEdit(service)}>
+                  <button className="btn btn-edit btn-sm" onClick={() => handleEdit(service)}>
                     Edit
                   </button>
                   {' '}
-                  <button className="btn btn-danger btn-sm" onClick={() => handleDelete(service.id)}>
+                  <button className="btn btn-delete btn-sm" onClick={() => handleDelete(service.id)}>
                     Delete
                   </button>
                 </td>
@@ -321,84 +323,103 @@ const ServicesDashboard = () => {
                       required
                     />
                   </div>
+
                   <div className="form-group">
                     <label htmlFor="description">Description</label>
-                    <input
-                      type="text"
+                    <textarea
                       className="form-control"
                       id="description"
+                      rows="3"
                       value={formData.description}
                       onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                       required
                     />
                   </div>
-                  <div className="form-group">
-                    <label htmlFor="cost">Cost</label>
-                    <input
-                      type="number"
-                      className="form-control"
-                      id="cost"
-                      value={formData.cost}
-                      onChange={(e) => setFormData({ ...formData, cost: e.target.value })}
-                      required
-                    />
+
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <label htmlFor="category">Category</label>
+                        <select
+                          className="form-control"
+                          id="category"
+                          value={formData.categoryId}
+                          onChange={(e) => setFormData({ ...formData, categoryId: e.target.value })}
+                          required
+                        >
+                          <option value="">Select Category</option>
+                          {categories.map((category) => (
+                            <option key={category.id} value={category.id}>
+                              {category.name}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <label htmlFor="cost">Cost</label>
+                        <input
+                          type="number"
+                          className="form-control"
+                          id="cost"
+                          value={formData.cost}
+                          onChange={(e) => setFormData({ ...formData, cost: e.target.value })}
+                          required
+                        />
+                      </div>
+                    </div>
                   </div>
-                  <div className="form-group">
-                    <label htmlFor="timePeriod">Time Period</label>
-                    <input
-                      type="number"
-                      className="form-control"
-                      id="timePeriod"
-                      value={formData.timePeriod}
-                      onChange={(e) => setFormData({ ...formData, timePeriod: e.target.value })}
-                      required
-                    />
+
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <label htmlFor="slots">Slots</label>
+                        <input
+                          type="number"
+                          className="form-control"
+                          id="slots"
+                          value={formData.slots}
+                          onChange={(e) => setFormData({ ...formData, slots: e.target.value })}
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <label htmlFor="fixedTimeSlots">Fixed Time Slots</label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          id="fixedTimeSlots"
+                          value={formData.fixedTimeSlots.join(', ')}
+                          onChange={(e) => setFormData({ ...formData, fixedTimeSlots: e.target.value.split(', ') })}
+                          required
+                        />
+                      </div>
+                    </div>
                   </div>
-                  <div className="form-group">
-                    <label htmlFor="slots">Slots</label>
-                    <input
-                      type="number"
-                      className="form-control"
-                      id="slots"
-                      value={formData.slots}
-                      onChange={(e) => setFormData({ ...formData, slots: e.target.value })}
-                      required
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="category">Category</label>
-                    <select
-                      className="form-control"
-                      id="category"
-                      value={formData.categoryId}
-                      onChange={(e) => setFormData({ ...formData, categoryId: e.target.value })}
-                      required
-                    >
-                      <option value="">Select Category</option>
-                      {categories.map((category) => (
-                        <option key={category.id} value={category.id}>
-                          {category.name}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="fixedTimeSlots">Fixed Time Slots</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="fixedTimeSlots"
-                      value={formData.fixedTimeSlots.join(', ')}
-                      onChange={(e) => setFormData({ ...formData, fixedTimeSlots: e.target.value.split(', ') })}
-                      required
-                    />
+                  <div className="row">
+                    <div className="col-md-12">
+                      <div className="form-group">
+                        <label htmlFor="timePeriod">Time Period</label>
+                        <input
+                          type="number"
+                          className="form-control"
+                          id="timePeriod"
+                          value={formData.timePeriod}
+                          onChange={(e) => setFormData({ ...formData, timePeriod: e.target.value })}
+                          required
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className="modal-footer">
-                  <button type="button" className="btn btn-secondary" onClick={handleClose}>
-                    Close
+                  <button type="button" className="btn btn-cancel" onClick={handleClose}>
+                    Cancel
                   </button>
-                  <button type="submit" className="btn btn-primary">
+                  <button type="submit" className="btn btn-save">
                     Save Changes
                   </button>
                 </div>

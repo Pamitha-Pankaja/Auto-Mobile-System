@@ -70,8 +70,8 @@ const Appointments = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div className="container-fluid appointment-dashboard">
-      <h1>Admin Dashboard</h1>
+    <div className="container-fluid p-0">
+      <h1>Appointments</h1>
       <div className="table-responsive">
         <table className="table table-striped">
           <thead>
