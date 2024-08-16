@@ -21,6 +21,8 @@ Project: Autorix
 */
 
 body {
+  background:var(--e-global-color-dark-blue2);
+  overflow-y: hidden;
   font-family: 'Chakra Petch', sans-serif;
 }
 :root {
@@ -853,10 +855,12 @@ nav.fill ul li a:after {
 
 
 /* mission-section */
+.mission-section{
+  background: url(../assets/images/our-services-background-img.jpg);
+}
 .mission-section .about-us-content{
   margin-left: 20px;
 }
-
 .mission-section .autorix-text {
   letter-spacing: 0px;
   margin-bottom: 20px;

@@ -22,19 +22,19 @@ const Home = () => {
     return (
         <div className='main-container'>
             <section id="home" class="home-header-section">
-                <Banner />
+                <Banner/>
             </section>
             <section>
-                <AboutUs />
+                <AboutUs/>
             </section>
             <section id="services">
-                <Services />
+                <Services/>
             </section>
             <section id="team">
-                <Team />
+                <Team/>
             </section>
             <section id="contact">
-                <Contact />
+                <Contact/>
             </section>
             <Footer className="overflow-hidden"/>
         </div>

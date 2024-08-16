@@ -1,4 +1,7 @@
 /*Admin Dashboard css*/
+.admin-dashboard{
+  background-color: #ffffff;
+}
 .admin-dashboard h1{
   background-color: #495057; /* Ash background color */
   color: #ffffff; /* White text color */
