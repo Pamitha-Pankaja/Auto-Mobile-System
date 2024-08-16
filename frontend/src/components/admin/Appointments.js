@@ -96,14 +96,14 @@ const Appointments = () => {
                 <td>
                   <button
                     onClick={() => appointment.approved === 0 && handleStatusClick(appointment.id, 1)}
-                    className={`btn ${appointment.approved === 1 ? 'btn-success' : appointment.approved === 2 ? 'btn-danger' : 'btn-warning'}`}
+                    className={`btn ${appointment.approved === 1 ? 'btn-success' : appointment.approved === 2 ? 'btn-danger' : 'btn-warning'} mr-2`}
                   >
                     {appointment.approved === 1 ? 'Approved' : appointment.approved === 2 ? 'Disapproved' : 'Pending'}
                   </button>
                   {appointment.approved === 0 && (
                     <button
                       onClick={() => handleStatusClick(appointment.id, 2)}
-                      className="btn btn-danger btn-sm ml-2"
+                      className="btn btn-danger btn-sm mr-2"
                     >
                       Disapprove
                     </button>
