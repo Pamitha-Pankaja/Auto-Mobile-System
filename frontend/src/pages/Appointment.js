@@ -100,7 +100,7 @@ const Appointment = () => {
         }
       },
       technician: {
-        id: 1  // Replace with the actual technician ID
+        id: 3  // Replace with the actual technician ID
       },
       service: {
         id: selectedService.id
