@@ -10,7 +10,6 @@ import Popper from '@popperjs/core';
 import 'aos/dist/aos.css';
 import './stylesheets/style.css'
 import './stylesheets/mobile.css'
-
 import App from './App';
 import { AuthProvider } from './components/AuthForms/AuthContext';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
