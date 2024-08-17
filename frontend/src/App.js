@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Home from './pages/HomePage';
 import AuthPage from './pages/AuthPage';
@@ -11,6 +11,14 @@ import UserProfile from './pages/UserProfile';
 const App = () => {
   const location = useLocation();
   const showNavbar = location.pathname !== '/dashboard';
+
+  useEffect(() => {
+    if (location.pathname === '/' || location.pathname === '/services' || location.pathname === '/appointment') {
+      document.body.style.overflowY = 'auto';
+    } else {
+      document.body.style.overflowY = 'hidden';
+    }
+  }, [location.pathname]);
 
   return (
     <div className="App">

@@ -2,18 +2,16 @@ import React, { useEffect, useState, useContext } from 'react';
 import { AuthContext } from '../components/AuthForms/AuthContext';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import '../stylesheets/userProfile.css';
 
 const UserProfile = () => {
-  const { state, dispatch } = useContext(AuthContext);
-  const [vehicleDetails, setVehicleDetails] = useState([]);
+  const { state, dispatch } = useContext(AuthContext); // Get the logged-in user's info from context
+  const [vehicleDetails, setVehicleDetails] = useState(null);
   const [serviceHistory, setServiceHistory] = useState([]);
-
 
   useEffect(() => {
     const fetchVehicleDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/vehicles/user/${state.user.id}`);
+        const response = await fetch(`http://localhost:8080/api/vehicles/${state.user.id}`);
         if (response.ok) {
           const data = await response.json();
           console.log(data);
@@ -28,7 +26,7 @@ const UserProfile = () => {
 
     const fetchServiceHistory = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/appointments/history/${state.user.id}`);
+        const response = await fetch(`http://localhost:8080/api/appointments/history/${user.id}`);
         if (response.ok) {
           const data = await response.json();
           console.log(data);
@@ -43,7 +41,11 @@ const UserProfile = () => {
 
     fetchVehicleDetails();
     fetchServiceHistory();
-  }, [state.user.id]);
+  }, [user]);
+
+  if (!user) {
+    return <p>Loading user data...</p>;
+  }
 
   return (
     <div className="user-profile">

@@ -13,12 +13,12 @@ const AdminDashboard = () => {
   const { state } = useContext(AuthContext);
   const { user, token } = state;
 
-  // useEffect(() => {
-  //   console.log("user",user);
-  //   if(token === null){
-  //     navigate('/signin');
-  //   }
-  // }, []);
+  useEffect(() => {
+    console.log("user",user);
+    if(token === null){
+      navigate('/signin');
+    }
+  }, []);
 
   const renderSection = () => {
     switch (activeSection) {
