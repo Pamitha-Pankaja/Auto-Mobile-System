@@ -1,13 +1,12 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { AuthContext } from '../components/AuthForms/AuthContext';
 import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 
 const UserProfile = () => {
   const navigate = useNavigate(); 
-  const { state, dispatch } = useContext(AuthContext); // Get the logged-in user's info from context
-  const [vehicleDetails, setVehicleDetails] = useState(null);
+  const { state, dispatch } = useContext(AuthContext);
+  const [vehicleDetails, setVehicleDetails] = useState([]);
   const [serviceHistory, setServiceHistory] = useState([]);
   const { user, token } = state;
 
@@ -21,7 +20,7 @@ const UserProfile = () => {
   useEffect(() => {
     const fetchVehicleDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/vehicles/${user.id}`);
+        const response = await fetch(`http://localhost:8080/api/vehicles/user/${user.id}`);
         if (response.ok) {
           const data = await response.json();
           console.log(data);
@@ -51,7 +50,7 @@ const UserProfile = () => {
 
     fetchVehicleDetails();
     fetchServiceHistory();
-  }, [user]);
+  }, [user.id]);
 
   if (!user) {
     return <p>Loading user data...</p>;
@@ -123,6 +122,3 @@ const UserProfile = () => {
 };
 
 export default UserProfile;
-
-
-
