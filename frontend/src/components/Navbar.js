@@ -126,9 +126,9 @@ const Navbar = () => {
                                     {state.user ? (
                                         <>
                                             <span className="navbar-text mr-3">Hello, {state.user.username}</span>
-                                            {/* <button className="btn btn-outline-secondary" onClick={handleLogout}>
-                                                Logout
-                                            </button> */}
+                                            <Link to="/userprofile" className="nav-link">
+                                                <i className="fas fa-user fa-lg"></i>
+                                            </Link>
                                             <div className="ml-auto">
                                                 <ul className="m-0 p-0">
                                                     <li className="list-unstyled d-lg-inline-block">
