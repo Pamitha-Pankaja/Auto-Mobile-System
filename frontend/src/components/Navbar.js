@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { Link as ScrollLink, scroller } from 'react-scroll';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import logo from '../assets/images/autorix-logo.png';
+import logo from '../assets/images/autodock-logo.png';
 import '../stylesheets/style.css';
 import { AuthContext } from './AuthForms/AuthContext';
 
@@ -45,7 +45,7 @@ const Navbar = () => {
                     <nav className="navbar navbar-expand-lg navbar-light fixed-top p-2">
                         <div className="container d-flex justify-content-between">
                             <Link className="navbar-brand pt-0" to="/">
-                                <img src={logo} alt="Logo" className="img-fluid" />
+                                <img src={logo} alt="Logo" className="nav-logo img-fluid" />
                             </Link>
                             <div
                                 className={`navbar-toggler ${isCollapsed ? 'collapsed' : ''}`}

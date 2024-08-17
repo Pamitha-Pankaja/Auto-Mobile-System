@@ -124,6 +124,7 @@ a {
   background-size: cover;
 }
 .main-header .navbar-brand {
+  width:140px;
   margin-left: 0px;
   padding-bottom: 0px;
   margin-right: 153px;
