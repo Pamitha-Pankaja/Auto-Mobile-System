@@ -29,7 +29,7 @@
 //     };
 
 //     console.log(data);
-    
+
 
 //     try {
 //       const response = await fetch('http://localhost:8080/api/auth/signin', {
@@ -62,7 +62,7 @@
 //         } else {
 //           navigate('/'); 
 //         }
-        
+
 //         console.log(result); // handle the response data as needed
 //       } else {
 //         const result = await response.json();
@@ -117,7 +117,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const SignIn = ({ toggleForm }) => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: '',
     password: ''
@@ -167,9 +167,9 @@ const SignIn = ({ toggleForm }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const hasErrors = Object.values(errors).some(error => error !== '') || 
-                      Object.values(formData).some(value => value === '');
-    
+    const hasErrors = Object.values(errors).some(error => error !== '') ||
+      Object.values(formData).some(value => value === '');
+
     if (hasErrors) {
       toast.error("Please fix the errors in the form", {
         position: "top-right",
@@ -219,15 +219,17 @@ const SignIn = ({ toggleForm }) => {
           pauseOnHover: true,
           draggable: true,
         });
-        
+
 
         // Check if the user has the "ROLE_ADMIN" role
-        if (result.roles.includes('ROLE_ADMIN')) {
-          navigate('/dashboard'); 
-        } else {
-          navigate('/'); 
-        }
-        
+        setTimeout(() => {
+          if (result.roles.includes('ROLE_ADMIN')) {
+            navigate('/dashboard');
+          } else {
+            navigate('/');
+          }
+        }, 3000);
+
       } else {
         const result = await response.json();
         toast.error(`Login failed: ${result.message}`, {
@@ -257,49 +259,49 @@ const SignIn = ({ toggleForm }) => {
 
   return (
     <>
-    <ToastContainer autoClose={3000} />
-    <div className="auth-card card p-4 shadow-lg" data-aos="fade-up" style={{ maxWidth: '400px', width: '100%' }}>
-      
-      <div className="card-body">
-        <h2 className="card-title text-center mb-4">Sign In</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="form-group mb-3" data-aos="fade-right">
-            <label htmlFor="username">Username</label>
-            <input 
-              type="text" 
-              className={`form-control ${errors.username ? 'is-invalid' : ''}`} 
-              id="username" 
-              placeholder="Username"  
-              value={formData.username} 
-              onChange={handleChange} 
-              required 
-            />
-            {errors.username && <div className="invalid-feedback">{errors.username}</div>}
-          </div>
-          <div className="form-group mb-4" data-aos="fade-right">
-            <label htmlFor="password">Password</label>
-            <input 
-              type="password" 
-              className={`form-control ${errors.password ? 'is-invalid' : ''}`} 
-              id="password" 
-              placeholder="Password"  
-              value={formData.password} 
-              onChange={handleChange}  
-              required 
-            />
-            {errors.password && <div className="invalid-feedback">{errors.password}</div>}
-          </div>
-          <div className="form-group form-check mb-4" data-aos="fade-right">
-            <input type="checkbox" className="form-check-input" id="rememberMe" />
-            <label className="form-check-label" htmlFor="rememberMe">Remember me</label>
-          </div>
-          <button type="submit" className="btn btn-primary btn-block" data-aos="fade-right">Sign In</button>
-          <div className="text-center mt-3" data-aos="fade-right">
-            <span>Don't have an account? <a href="#" className="toggle-form" onClick={toggleForm}>Sign Up</a></span>
-          </div>
-        </form>
+      <ToastContainer autoClose={3000} />
+      <div className="auth-card card p-4 shadow-lg" data-aos="fade-up" style={{ maxWidth: '400px', width: '100%' }}>
+
+        <div className="card-body">
+          <h2 className="card-title text-center mb-4">Sign In</h2>
+          <form onSubmit={handleSubmit}>
+            <div className="form-group mb-3" data-aos="fade-right">
+              <label htmlFor="username">Username</label>
+              <input
+                type="text"
+                className={`form-control ${errors.username ? 'is-invalid' : ''}`}
+                id="username"
+                placeholder="Username"
+                value={formData.username}
+                onChange={handleChange}
+                required
+              />
+              {errors.username && <div className="invalid-feedback">{errors.username}</div>}
+            </div>
+            <div className="form-group mb-4" data-aos="fade-right">
+              <label htmlFor="password">Password</label>
+              <input
+                type="password"
+                className={`form-control ${errors.password ? 'is-invalid' : ''}`}
+                id="password"
+                placeholder="Password"
+                value={formData.password}
+                onChange={handleChange}
+                required
+              />
+              {errors.password && <div className="invalid-feedback">{errors.password}</div>}
+            </div>
+            <div className="form-group form-check mb-4" data-aos="fade-right">
+              <input type="checkbox" className="form-check-input" id="rememberMe" />
+              <label className="form-check-label" htmlFor="rememberMe">Remember me</label>
+            </div>
+            <button type="submit" className="btn btn-primary btn-block" data-aos="fade-right">Sign In</button>
+            <div className="text-center mt-3" data-aos="fade-right">
+              <span>Don't have an account? <a href="#" className="toggle-form" onClick={toggleForm}>Sign Up</a></span>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
     </>
   );
 };
