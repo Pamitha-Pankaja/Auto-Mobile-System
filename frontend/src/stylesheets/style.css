@@ -3368,3 +3368,32 @@ input[type="number"]::-webkit-calendar-picker-indicator {
 .slick-dots {
   bottom: -30px;
 }
+
+/*User Profile*/
+.user-profile {
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 40px 20px;
+}
+ 
+.user-profile .profile-details, .vehicle-details, .service-history {
+  margin-bottom: 20px;
+}
+ 
+.user-profile .profile-details {
+  width: 30%;
+  float: left;
+}
+ 
+.user-profile .vehicle-details {
+  width: 30%;
+  float: right;
+}
+ 
+.user-profile .service-history {
+  width: 100%;
+  clear: both;
+  margin-top: 40px;
+}
