@@ -2,16 +2,26 @@ import React, { useEffect, useState, useContext } from 'react';
 import { AuthContext } from '../components/AuthForms/AuthContext';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 const UserProfile = () => {
+  const navigate = useNavigate(); 
   const { state, dispatch } = useContext(AuthContext); // Get the logged-in user's info from context
   const [vehicleDetails, setVehicleDetails] = useState(null);
   const [serviceHistory, setServiceHistory] = useState([]);
+  const { user, token } = state;
+
+  useEffect(() => {
+    if (!user || !user.id) {
+      navigate('/signin');
+      return;
+    }
+  }, [user,navigate]);
 
   useEffect(() => {
     const fetchVehicleDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/vehicles/${state.user.id}`);
+        const response = await fetch(`http://localhost:8080/api/vehicles/${user.id}`);
         if (response.ok) {
           const data = await response.json();
           console.log(data);
