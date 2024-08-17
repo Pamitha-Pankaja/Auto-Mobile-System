@@ -1,0 +1,25 @@
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+   
+  .profile-details, .vehicle-details, .service-history {
+    margin-bottom: 20px;
+  }
+   
+  .profile-details {
+    width: 30%;
+    float: left;
+  }
+   
+  .vehicle-details {
+    width: 30%;
+    float: right;
+  }
+   
+  .service-history {
+    width: 100%;
+    clear: both;
+    margin-top: 40px;
+  }

@@ -1,20 +1,22 @@
 import React, { useEffect, useState, useContext } from 'react';
-import {AuthContext} from '../components/AuthForms/AuthContext'; // Assuming you have AuthContext to get user info
+import { AuthContext } from '../components/AuthForms/AuthContext';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import '../stylesheets/userProfile.css';
 
 const UserProfile = () => {
-  const { state, dispatch } = useContext(AuthContext); // Get the logged-in user's info from context
-  const [vehicleDetails, setVehicleDetails] = useState(null);
+  const { state, dispatch } = useContext(AuthContext);
+  const [vehicleDetails, setVehicleDetails] = useState([]);
   const [serviceHistory, setServiceHistory] = useState([]);
 
+
   useEffect(() => {
-    // Fetch vehicle details
     const fetchVehicleDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/vehicles/${state.user.id}`);
+        const response = await fetch(`http://localhost:8080/api/vehicles/user/${state.user.id}`);
         if (response.ok) {
           const data = await response.json();
+          console.log(data);
           setVehicleDetails(data);
         } else {
           toast.error('Failed to fetch vehicle details');
@@ -24,12 +26,12 @@ const UserProfile = () => {
       }
     };
 
-    // Fetch service history
     const fetchServiceHistory = async () => {
       try {
         const response = await fetch(`http://localhost:8080/api/appointments/history/${state.user.id}`);
         if (response.ok) {
           const data = await response.json();
+          console.log(data);
           setServiceHistory(data);
         } else {
           toast.error('Failed to fetch service history');
@@ -49,36 +51,57 @@ const UserProfile = () => {
         <h2>Your Profile</h2>
         <p><strong>Name:</strong> {state.user.username}</p>
         <p><strong>Email:</strong> {state.user.email}</p>
-        {/* Add more personal details as needed */}
       </div>
-      
+
       <div className="vehicle-details">
         <h2>Your Vehicles</h2>
-        {vehicleDetails ? (
-          <ul>
-            <li><strong>Make:</strong> {vehicleDetails.make}</li>
-            <li><strong>Model:</strong> {vehicleDetails.model}</li>
-            <li><strong>Year:</strong> {vehicleDetails.year}</li>
-            {/* Add more vehicle details as needed */}
-          </ul>
+        {vehicleDetails.length > 0 ? (
+          <table className="vehicle-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Type</th>
+                <th>Vehicle Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              {vehicleDetails.map((vehicle) => (
+                <tr key={vehicle.id}>
+                  <td>{vehicle.model}</td>
+                  <td>{vehicle.type}</td>
+                  <td>{vehicle.vehicleNumber}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         ) : (
-          <p>Loading vehicle details...</p>
+          <p>No vehicles found.</p>
         )}
       </div>
 
       <div className="service-history">
         <h2>Your Service History</h2>
         {serviceHistory.length > 0 ? (
-          <ul>
-            {serviceHistory.map((appointment) => (
-              <li key={appointment.id}>
-                <p><strong>Date:</strong> {appointment.date}</p>
-                <p><strong>Service:</strong> {appointment.serviceName}</p>
-                <p><strong>Status:</strong> {appointment.status}</p>
-                {/* Add more service history details as needed */}
-              </li>
-            ))}
-          </ul>
+          <table className="service-history-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Service Name</th>
+                <th>Status</th>
+                <th>Vehicle Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              {serviceHistory.map((appointment) => (
+                <tr key={appointment.id}>
+                  <td>{appointment.date}</td>
+                  <td>{appointment.services.name}</td>
+                  <td>{appointment.approved === 1 ? 'Approved' : 'Pending'}</td>
+                  <td>{appointment.vehicle.vehicleNumber}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         ) : (
           <p>No service history found.</p>
         )}
@@ -88,3 +111,6 @@ const UserProfile = () => {
 };
 
 export default UserProfile;
+
+
+
