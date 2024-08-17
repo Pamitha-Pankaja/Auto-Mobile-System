@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const UserProfile = () => {
-  const { user } = useContext(AuthContext); // Get the logged-in user's info from context
+  const { state, dispatch } = useContext(AuthContext); // Get the logged-in user's info from context
   const [vehicleDetails, setVehicleDetails] = useState(null);
   const [serviceHistory, setServiceHistory] = useState([]);
 
@@ -12,7 +12,7 @@ const UserProfile = () => {
     // Fetch vehicle details
     const fetchVehicleDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/vehicles/${user.id}`);
+        const response = await fetch(`http://localhost:8080/api/vehicles/${state.user.id}`);
         if (response.ok) {
           const data = await response.json();
           setVehicleDetails(data);
@@ -27,7 +27,7 @@ const UserProfile = () => {
     // Fetch service history
     const fetchServiceHistory = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/appointments/history/${user.id}`);
+        const response = await fetch(`http://localhost:8080/api/appointments/history/${state.user.id}`);
         if (response.ok) {
           const data = await response.json();
           setServiceHistory(data);
@@ -41,14 +41,14 @@ const UserProfile = () => {
 
     fetchVehicleDetails();
     fetchServiceHistory();
-  }, [user.id]);
+  }, [state.user.id]);
 
   return (
     <div className="user-profile">
       <div className="profile-details">
         <h2>Your Profile</h2>
-        <p><strong>Name:</strong> {user.username}</p>
-        <p><strong>Email:</strong> {user.email}</p>
+        <p><strong>Name:</strong> {state.user.username}</p>
+        <p><strong>Email:</strong> {state.user.email}</p>
         {/* Add more personal details as needed */}
       </div>
       
