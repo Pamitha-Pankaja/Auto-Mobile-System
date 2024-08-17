@@ -6,6 +6,7 @@ import Appointment from './pages/Appointment';
 import Navbar from './components/Navbar';
 import SubServices from './components/HomeSections/SubServices';
 import AdminDashboard from './pages/AdminDashboard';
+import UserProfile from './pages/UserProfile';
 
 const App = () => {
   const location = useLocation();
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/appointment" element={<Appointment />} />
           <Route path="/services" element={<SubServices />} />
           <Route path="/dashboard" element={<AdminDashboard />} />
+          <Route path="/Userprofile" element={<UserProfile />} />
         </Routes>
       </div>
     </div>
