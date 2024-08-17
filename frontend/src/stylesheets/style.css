@@ -398,7 +398,8 @@ a {
 
 
 /* whychoose-section */
-.whychoose-section{
+.whychoose-section{  
+  background-image:url(../assets/images/our-services-background-img.jpg);
   padding: 150px 0 110px;
 }
 
