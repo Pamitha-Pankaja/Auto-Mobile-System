@@ -36,6 +36,21 @@
 .admin-dashboard .table .btn-edit{
   background-color: #495057;
 }
+
+/*Status Buttons*/
+.admin-dashboard .table .btn-pending{
+  background-color: #ffc107;
+}
+.admin-dashboard .table .btn-disapprove{
+  background-color: #b50c09;
+}
+.admin-dashboard .table .btn-approved{
+  background-color: #28a745;
+}
+.admin-dashboard .table .btn-disapproved{
+  background-color: #b50c09;
+}
+
 .admin-dashboard .table .btn-warning {
   background-color: #ffc107; /* Yellow for pending */
 }
@@ -109,18 +124,18 @@
   font-weight: bold; /* Bold text */
 }
 .react-confirm-alert-button-group button:first-child {
-  background-color: #28a745; /* Green for Yes */
+  background-color: #495057; /* Green for Yes */
   color: white;
 }
 .react-confirm-alert-button-group button:first-child:hover {
-  background-color: #218838; /* Darker green for hover */
+  background-color: #2f3338; /* Darker green for hover */
 }
 .react-confirm-alert-button-group button:last-child {
-  background-color: #dc3545; /* Red for No */
+  background-color: #b50c09; /* Red for No */
   color: white;
 }
 .react-confirm-alert-button-group button:last-child:hover {
-  background-color: #c82333; /* Darker red for hover */
+  background-color: #a10a07; /* Darker red for hover */
 }
 
 /*modal box*/
