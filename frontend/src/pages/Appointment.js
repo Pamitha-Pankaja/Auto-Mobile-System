@@ -29,14 +29,13 @@ const Appointment = () => {
     console.log("user",user);
     if(token === null){
       navigate('/signin');
-    }
-    
+    }   
     // AOS.init({ duration: 1000 });
     fetchCategories();
   }, []);
 
-  useEffect(() => {
-
+  useEffect(() => {  
+    console.log("selectedCategory",selectedCategory);
     if (selectedCategory) {
       console.log("catergory",selectedCategory);
       fetchServices(selectedCategory);
@@ -66,6 +65,7 @@ const Appointment = () => {
     try {
       const response = await axios.get('http://localhost:8080/api/services/category/'+selectedCategory.id);
       setAvailableServicesList(response.data)
+      console.log("AvailableServicesList",availableServicesList)
     } catch (error) {
       console.error('Error fetching categories:', error);
     }
@@ -125,7 +125,7 @@ const Appointment = () => {
   }
   
   return (
-    <div className="mission-section overflow-hidden">
+    <div className="mission-section overflowY-auto">
       <div className="container">
         <div className="row">
           <div className="col-xl-3 col-lg-3 col-md-3 col-sm-3 d-xl-block d-none mr-4">

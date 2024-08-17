@@ -25,14 +25,6 @@ const Navbar = () => {
         }
     }, [location]);
 
-    useEffect(() => {
-        if (location.pathname === '/' || location.pathname === '/services') {
-            document.body.style.overflowY = 'auto';
-        } else {
-            document.body.style.overflowY = 'hidden';
-        }
-    }, [location.pathname]);
-
     const handleNavClick = (section) => {
         setActiveLink(section);
         navigate(`/#${section}`);
