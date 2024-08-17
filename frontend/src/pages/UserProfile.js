@@ -50,7 +50,7 @@ const UserProfile = () => {
 
     fetchVehicleDetails();
     fetchServiceHistory();
-  }, [user.id]);
+  }, [user]);
 
   if (!user) {
     return <p>Loading user data...</p>;
