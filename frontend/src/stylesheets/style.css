@@ -23,7 +23,7 @@ Project: Autorix
 body {
   background:var(--e-global-color-dark-blue2);
   overflow-x: hidden;
-  overflow-y:scroll;
+  overflow-y:auto;
   -ms-overflow-style: none;
   scrollbar-width: none; 
   font-family: 'Chakra Petch', sans-serif;
@@ -165,11 +165,16 @@ a {
 .home-banner-text {
   padding: 0px 0 193px 0;
 }
-.btn-login{
+.nav-end{
   flex-grow: 1;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+.profile-icon{
+  color: var(--e-global-color-accent);
+  font-size: 1.8rem;
+  margin-right: 25px;
 }
 .btn-login a {
   background: var(--e-global-color-blue-f);
@@ -210,7 +215,6 @@ a {
   margin-left: 52px !important;
   display: flex;
   align-items: center;
-
 }
 .btn-talk a:hover {
   transform: translateY(-3px);

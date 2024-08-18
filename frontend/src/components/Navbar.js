@@ -114,14 +114,13 @@ const Navbar = () => {
                                         </li>
                                     </ul>
                                 </div>
-                                <div className="btn-login ml-auto d-flex align-items-center">
+                                <div className="nav-end ml-auto d-flex align-items-center">
                                     {state.user ? (
                                         <>
-                                            <span className="navbar-text mr-3">Hello, {state.user.username}</span>
                                             <Link to="/userprofile" className="nav-link">
-                                                <i className="fas fa-user fa-lg"></i>
+                                                <i className="fas fa-user fa-lg profile-icon"></i>
                                             </Link>
-                                            <div className="ml-auto">
+                                            <div className="btn-login ml-auto">
                                                 <ul className="m-0 p-0">
                                                     <li className="list-unstyled d-lg-inline-block">
                                                         <Link className="btn btn-outline-primary" onClick={handleLogout}>
@@ -132,7 +131,7 @@ const Navbar = () => {
                                             </div>
                                         </>
                                     ) : (
-                                        <div className="ml-auto">
+                                        <div className="btn-login ml-auto">
                                             <ul className="m-0 p-0">
                                                 <li className="list-unstyled d-lg-inline-block">
                                                     <Link to="/signin" className="btn btn-outline-primary">
