@@ -1,7 +1,7 @@
 import React from 'react';
 import 'aos/dist/aos.css'; // AOS library for animations
 import AOS from 'aos';
-import aboutImage from '../../assets/images/aboutus-center-img.png';
+import aboutImage from '../../assets/images/autodock-center-img.png';
 
 const AboutUs = () => {
   React.useEffect(() => {
