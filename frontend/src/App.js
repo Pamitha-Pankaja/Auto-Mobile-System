@@ -13,10 +13,10 @@ const App = () => {
   const showNavbar = location.pathname !== '/dashboard';
 
   useEffect(() => {
-    if (location.pathname === '/' || location.pathname === '/services' || location.pathname === '/appointment') {
-      document.body.style.overflowY = 'auto';
-    } else {
-      document.body.style.overflowY = 'hidden';
+    if(location.pathname ==='/userprofile') {
+      document.body.style.backgroundColor = '#192541'
+    }else{
+      document.body.style.backgroundColor = '#192541'
     }
   }, [location.pathname]);
 

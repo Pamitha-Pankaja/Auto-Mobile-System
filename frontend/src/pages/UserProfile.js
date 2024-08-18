@@ -129,7 +129,6 @@ import { AuthContext } from '../components/AuthForms/AuthContext';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../stylesheets/userProfile.css'; // Import the CSS file
 
 const UserProfile = () => {
   const navigate = useNavigate(); 
@@ -183,7 +182,8 @@ const UserProfile = () => {
   }
 
   return (
-    <div className="container mt-5">
+    <div className='user-profile'>
+    <div className="container">
       <div className="row">
         <div className="col-md-4">
           <div className="card mb-4 shadow-sm">
@@ -259,6 +259,7 @@ const UserProfile = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

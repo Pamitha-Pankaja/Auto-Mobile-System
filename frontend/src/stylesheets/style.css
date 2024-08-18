@@ -22,9 +22,16 @@ Project: Autorix
 
 body {
   background:var(--e-global-color-dark-blue2);
-  overflow-y: hidden;
+  overflow-x: hidden;
+  overflow-y:scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
   font-family: 'Chakra Petch', sans-serif;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
+
 :root {
   --e-global-color-primary: #262626;
   --e-global-color-secondary: #ffffff;
@@ -3373,11 +3380,11 @@ input[type="number"]::-webkit-calendar-picker-indicator {
 
 /*User Profile*/
 .user-profile {
+  overflow-y: auto;
   min-height: 100vh;
   background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  padding: 100px 40px 20px;
+  margin-top: 70px;
+  padding-top: 20px;
 }
  
 .user-profile .profile-details, .vehicle-details, .service-history {
@@ -3399,3 +3406,25 @@ input[type="number"]::-webkit-calendar-picker-indicator {
   clear: both;
   margin-top: 40px;
 }
+
+/* Enable scroll without showing the scrollbar */
+/* .user-profile body {
+  overflow-y: scroll;
+  scrollbar-width: none;  Hide scrollbar in Firefox 
+  -ms-overflow-style: none;  Hide scrollbar in Internet Explorer and Edge 
+} */
+
+/* .user-profile body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+} */
+
+/* .user-profile .container {
+  max-height: 100vh;
+  padding: 0px;
+}
+
+.user-profile .container::-webkit-scrollbar {
+  display: none; 
+} */
+
