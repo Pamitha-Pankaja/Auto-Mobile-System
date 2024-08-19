@@ -6,12 +6,7 @@ import BannerCarousel from '../BannerCarousel';
 const Banner = () => {
     return (
         <section id="banner" className="banner-section">
-            <div className="home-banner-section overflow-hidden">
-                <div className="banner-img-outer">
-                    <figure className="banner-img mb-0 wow slideInRight left_icon" data-aos="fade-right">
-                        <img className="img-fluid banner-img-width" src={bannerImg} alt="" />
-                    </figure>
-                </div>
+            <div className="home-banner-section">
                 <div className="banner-container-box" data-aos="flip-up">
                     <div className="container-fluid">
                         <div className="row">
@@ -25,6 +20,11 @@ const Banner = () => {
                                     </ul>
                                 </div>
                                 <BannerCarousel />
+                            </div>
+                            <div className="col-lg-6 col-md-12 col-sm-12 mb-md-0 mb-4 banner-img-outer">
+                                <figure className="banner-img mb-0 wow slideInRight left_icon" data-aos="fade-right">
+                                    <img className="img-fluid banner-img-width" src={bannerImg} alt="" />
+                                </figure>
                             </div>
                         </div>
                     </div>

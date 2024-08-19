@@ -129,6 +129,10 @@ a {
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  overflow: hidden;
 }
 .main-header .navbar-brand {
   width:140px;
@@ -262,13 +266,12 @@ a {
 }
 
 /* home-section */
-
 .home-banner-section .home-banner-text {
   padding: 0px 0 277px 0px;
 }
-.home-banner-section{
+.home-banner-section .banner-container-box {
   padding-top: 120px;
-  padding-left: 344px;
+  display: block;
   position: relative;
 }
 .banner-img{
@@ -282,7 +285,6 @@ a {
   margin-bottom: 10px;
   padding-right: 67px;
 }
-
 .banner-paragraph {
   font-size: 20px;
   font-weight: 400;
@@ -293,7 +295,6 @@ a {
 }
 .home-banner-section .banner-container-box  .social-icons ul{
   left: -250px;
-  top: 39px;
 }
 .home-banner-section .banner-img-outer{
   padding-top: 100px;
@@ -309,7 +310,6 @@ a {
   width: 28px;
   height: 20px;
   position: absolute;
-  top: -4px;
   left: 1%;
   right: 0;
 }

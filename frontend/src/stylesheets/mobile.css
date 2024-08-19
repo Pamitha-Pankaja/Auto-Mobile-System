@@ -862,9 +862,6 @@ padding: 100px 0;
 .footer-section {
   padding: 100px 0 80px;
 }
-.footer-bar {
-  padding: 20px 0;
-}
 /* services-page */
 .whychoose-section .service-page .circle-icon1 {
   top: 167px;
@@ -1064,6 +1061,9 @@ padding: 100px 0;
 
 
 @media only screen and (max-width: 991px) {
+.home-banner-section .banner-container-box {
+    padding-top: 0px;
+}
 .home-banner-section .home-banner-text {
     padding: 0px 0 513px 0px;
     text-align: center;
