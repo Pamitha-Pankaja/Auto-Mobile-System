@@ -118,11 +118,15 @@ import ourServiceImg6 from '../../assets/images/our-services-img6.png';
 import ourServiceCar from '../../assets/images/our-services-car-img.png';
 
 const Services = () => {
+    let local = "http://localhost:8080";
+  let deploy = "https://robust-wonder-production.up.railway.app"
+  let basurl = deploy;
+
     const navigate = useNavigate();
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:8080/api/service-categories')
+        fetch(deploy+'/api/service-categories')
             .then(response => response.json())
             .then(data => setCategories(data))
             .catch(error => console.error('Error fetching categories:', error));

@@ -205,6 +205,11 @@ const imageMap = {
 };
 
 const SubServices = () => {
+
+    let local = "http://localhost:8080";
+  let deploy = "https://robust-wonder-production.up.railway.app"
+  let basurl = deploy;
+
     const location = useLocation();
     const { categoryId } = location.state || {};
     console.log("Category ID:", categoryId);
@@ -212,7 +217,7 @@ const SubServices = () => {
 
     useEffect(() => {
         if (categoryId) {
-            fetch(`http://localhost:8080/api/services/category/${categoryId}`)
+            fetch(deploy+`/api/services/category/${categoryId}`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
