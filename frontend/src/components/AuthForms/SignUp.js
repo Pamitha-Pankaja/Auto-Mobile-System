@@ -115,6 +115,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const SignUp = ({ toggleForm }) => {
+  let local = "http://localhost:8080";
+  let deploy = "https://robust-wonder-production.up.railway.app"
+  let basurl = deploy;
   const [formData, setFormData] = useState({
     username: '',
     email: '',
@@ -207,7 +210,7 @@ const SignUp = ({ toggleForm }) => {
     };
 
     try {
-      const response = await fetch('http://localhost:8080/api/auth/signup', {
+      const response = await fetch(+basurl+'/api/auth/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

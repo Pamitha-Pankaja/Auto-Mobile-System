@@ -174,6 +174,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const ServicesDashboard = () => {
+  let local = "http://localhost:8080";
+  let deploy = "https://robust-wonder-production.up.railway.app"
+  let basurl = deploy;
   const [services, setServices] = useState([]);
   const [categories, setCategories] = useState([]);
   const [showModal, setShowModal] = useState(false);
@@ -195,13 +198,13 @@ const ServicesDashboard = () => {
   }, []);
 
   const fetchServices = async () => {
-    const response = await axios.get('http://localhost:8080/api/services');
+    const response = await axios.get(basurl+'/api/services');
     setServices(response.data);
   };
 
   const fetchCategories = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/api/service-categories');
+      const response = await axios.get(basurl+'/api/service-categories');
       setCategories(response.data);
       console.log(response);
     } catch (error) {
@@ -247,16 +250,16 @@ const ServicesDashboard = () => {
       category: { id: formData.categoryId },
     };
     if (editService) {
-      await axios.put(`http://localhost:8080/api/services/${editService.id}`, serviceData);
+      await axios.put(basurl+`/api/services/${editService.id}`, serviceData);
     } else {
-      await axios.post('http://localhost:8080/api/services', serviceData);
+      await axios.post(basurl+'/api/services', serviceData);
     }
     fetchServices();
     handleClose();
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:8080/api/services/${id}`);
+    await axios.delete(basurl+`/api/services/${id}`);
     fetchServices();
   };
 

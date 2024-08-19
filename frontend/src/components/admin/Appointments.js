@@ -6,6 +6,9 @@ import '../../stylesheets/AdminDashboard.css';
 import Sidebar from './Sidebar';
 
 const Appointments = () => {
+  let local = "http://localhost:8080";
+  let deploy = "https://robust-wonder-production.up.railway.app"
+  let basurl = deploy;
   const [appointments, setAppointments] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const appointmentsPerPage = 10;
@@ -13,7 +16,7 @@ const Appointments = () => {
   useEffect(() => {
     const fetchAppointments = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/appointments/all');
+        const response = await axios.get(basurl+'/api/appointments/all');
         const sortedAppointments = response.data.sort((a, b) => b.id - a.id);
         setAppointments(sortedAppointments);
       } catch (error) {
@@ -26,7 +29,7 @@ const Appointments = () => {
 
   const updateAppointmentStatus = async (appointmentId, status) => {
     try {
-      const response = await axios.put(`http://localhost:8080/api/appointments/approve/${appointmentId}/${status}`);
+      const response = await axios.put(basurl+`/api/appointments/approve/${appointmentId}/${status}`);
       if (response.data.status === 'Appointment Placed' || response.data.status === 'Appointment Disallowed') {
         setAppointments((prevAppointments) =>
           prevAppointments.map((appointment) =>

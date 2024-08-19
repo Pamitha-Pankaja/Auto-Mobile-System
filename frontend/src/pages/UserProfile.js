@@ -131,6 +131,9 @@ import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const UserProfile = () => {
+  let local = "http://localhost:8080";
+  let deploy = "https://robust-wonder-production.up.railway.app"
+  let basurl = deploy;
   const navigate = useNavigate(); 
   const { state } = useContext(AuthContext);
   const [vehicleDetails, setVehicleDetails] = useState([]);
@@ -147,7 +150,7 @@ const UserProfile = () => {
   useEffect(() => {
     const fetchVehicleDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/vehicles/user/${user.id}`);
+        const response = await fetch(basurl+`/api/vehicles/user/${user.id}`);
         if (response.ok) {
           const data = await response.json();
           setVehicleDetails(data);
@@ -161,7 +164,7 @@ const UserProfile = () => {
 
     const fetchServiceHistory = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/appointments/history/${user.id}`);
+        const response = await fetch(basurl+`/api/appointments/history/${user.id}`);
         if (response.ok) {
           const data = await response.json();
           setServiceHistory(data);

@@ -3,6 +3,9 @@ import axios from 'axios';
 
 
 const ServiceCategoriesDashboard = () => {
+  let local = "http://localhost:8080";
+  let deploy = "https://robust-wonder-production.up.railway.app"
+  let basurl = deploy;
   const [categories, setCategories] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [editCategory, setEditCategory] = useState(null);
@@ -17,7 +20,7 @@ const ServiceCategoriesDashboard = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/api/service-categories');
+      const response = await axios.get(basurl+'/api/service-categories');
       setCategories(response.data);
     } catch (error) {
       console.error('Error fetching categories:', error);
@@ -41,16 +44,16 @@ const ServiceCategoriesDashboard = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (editCategory) {
-      await axios.put(`http://localhost:8080/api/service-categories/${editCategory.id}`, formData);
+      await axios.put(basurl+`/api/service-categories/${editCategory.id}`, formData);
     } else {
-      await axios.post('http://localhost:8080/api/service-categories', formData);
+      await axios.post(basurl+'/api/service-categories', formData);
     }
     fetchCategories();
     handleClose();
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:8080/api/service-categories/${id}`);
+    await axios.delete(basurl+`/api/service-categories/${id}`);
     fetchCategories();
   };
 

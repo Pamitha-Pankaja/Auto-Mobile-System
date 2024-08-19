@@ -7,6 +7,10 @@ import missionManImg from '../assets/images/our-mission-man-img.png';
 import { useNavigate } from 'react-router-dom';
 
 const Appointment = () => {
+
+  let local = "http://localhost:8080";
+  let deploy = "https://robust-wonder-production.up.railway.app"
+  let basurl = deploy;
   const navigate = useNavigate(); 
   const [selectedCategory, setSelectedCategory] = useState('');
   const [selectedCategoryList, setSelectedCategoryList] = useState([]);
@@ -54,7 +58,7 @@ const Appointment = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/api/service-categories');
+      const response = await axios.get(basurl+'/api/service-categories');
       setSelectedCategoryList(response.data);
     } catch (error) {
       console.error('Error fetching categories:', error);
@@ -63,7 +67,7 @@ const Appointment = () => {
 
   const fetchServices = async (selectedCategory) => {
     try {
-      const response = await axios.get('http://localhost:8080/api/services/category/'+selectedCategory.id);
+      const response = await axios.get(basurl+'/api/services/category/'+selectedCategory.id);
       setAvailableServicesList(response.data)
       console.log("AvailableServicesList",availableServicesList)
     } catch (error) {
@@ -74,7 +78,7 @@ const Appointment = () => {
   const fetchAvailableTimeSlots = async (selectedDate) => {
     try {
       console.log("selectedCategory id",selectedService.id);
-      let url = 'http://localhost:8080/api/appointments/available-slots?date='+selectedDate+'&serviceId='+selectedService.id;
+      let url = basurl+'/api/appointments/available-slots?date='+selectedDate+'&serviceId='+selectedService.id;
       console.log("url",url);
       
       // http://localhost:8080/api/appointments/available-slots?date=2023-08-01&serviceId=3
@@ -115,7 +119,7 @@ const Appointment = () => {
     
 
     try {
-      const response = await axios.post('http://localhost:8080/api/appointments/book', appointmentData);
+      const response = await axios.post(basurl+'/api/appointments/book', appointmentData);
       console.log('Appointment booked successfully:', response.data);
       // Handle successful booking (e.g., show a success message, reset the form, etc.)
     } catch (error) {
