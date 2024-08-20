@@ -661,7 +661,7 @@ nav.fill ul li a:after {
   position: relative;
 }
 .about-us-section:before {
-  background: url(../assets/images/about-us-bg.png);
+  background: url(../assets/images/aboutus-background.png);
   content: "";
   position: absolute;
   top:0px;
