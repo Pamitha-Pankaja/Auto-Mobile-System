@@ -114,10 +114,15 @@ const Navbar = () => {
                                         </li>
                                     </ul>
                                 </div>
-                                <div className="nav-end ml-auto d-flex align-items-center">
+                                <div className="nav-end ml-auto d-flex">
                                     {state.user ? (
                                         <>
-                                            <Link to="/userprofile" className="nav-link">
+                                            {/* Display "Profile" link only on mobile screens (no blank space for profile icon) */}
+                                            <Link to="/userprofile" className="nav-link d-lg-none mobile-profile-link">
+                                                Profile
+                                            </Link>
+                                            {/* Display profile icon only on larger screens */}
+                                            <Link to="/userprofile" className="nav-link d-none d-lg-block">
                                                 <i className="fas fa-user fa-lg profile-icon"></i>
                                             </Link>
                                             <div className="btn-login ml-auto">

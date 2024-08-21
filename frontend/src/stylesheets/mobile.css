@@ -1101,6 +1101,18 @@ padding: 100px 0;
 .home-banner-section .banner-img-outer {
   padding-top: 55px;
 }
+.profile-icon{
+  display:none;
+}
+.nav-end{
+  align-items:start;
+}
+.mobile-profile-link {
+  display: block; /* Show the Profile link on mobile devices */
+  font-size: 1rem;
+  margin-top: 0px;
+  padding: 0px;
+}
 .navbar-collapse {
   position: absolute;
   right: 0px;
@@ -1117,7 +1129,6 @@ padding: 100px 0;
   line-height: 16px;
   padding: 10px 20px !important;
 }
-
 .navbar-nav .active>a {
   background: var(--e-global-color-secondary) !important;
   color: var(--e-global-color-accent) !important;
@@ -1126,16 +1137,13 @@ padding: 100px 0;
   left: -36px;
   top: 7px;
 }
-
 .navbar-nav li.active > a::before {
   display: none;
 }
-
 /* .navbar-collapse a:hover {
   color: var(--e-global-color-accent) !important;
   background: var(--e-global-color-soft-blue);
 } */
-
 .navbar-collapse .btn-talk a:hover {
   border-radius: 0;
   outline: 0;
@@ -1310,6 +1318,7 @@ h1 {
 .btn-talk {
   margin-left: 0 !important;
   margin-bottom: 5px;
+  margin-top: 5px;
 }
 .btn-talk li i {
   display: none;
