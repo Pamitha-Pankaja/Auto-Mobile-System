@@ -122,7 +122,7 @@ const Navbar = () => {
                                                 Profile
                                             </Link>
                                             {/* Display profile icon only on larger screens */}
-                                            <Link to="/userprofile" className="nav-link d-none d-lg-block">
+                                            <Link to="/userprofile" className="nav-link d-none d-lg-block ">
                                                 <i className="fas fa-user fa-lg profile-icon"></i>
                                             </Link>
                                             <div className="btn-login ml-auto">

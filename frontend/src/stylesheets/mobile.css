@@ -1106,12 +1106,13 @@ padding: 100px 0;
 }
 .nav-end{
   align-items:start;
+  justify-content: flex-start;
 }
 .mobile-profile-link {
   display: block; /* Show the Profile link on mobile devices */
   font-size: 1rem;
   margin-top: 0px;
-  padding: 0px;
+  padding-left: 0px;
 }
 .navbar-collapse {
   position: absolute;
@@ -1302,7 +1303,7 @@ h1 {
   display: flex;
   justify-content: flex-start;
   align-items: center;  
-  padding:0px 12px 10px !important;
+  padding:0px 0px 10px 0px!important;
 }
 .btn-talk a {
   background: transparent;
