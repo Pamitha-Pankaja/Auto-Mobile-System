@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState, useContext, useRef } from 'react';
 import { Link as ScrollLink, scroller } from 'react-scroll';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../assets/images/autodock-logo.png';
@@ -11,6 +11,7 @@ const Navbar = () => {
     const [isCollapsed, setIsCollapsed] = useState(true);
     const location = useLocation();
     const navigate = useNavigate();
+    const navbarRef = useRef(null); // Reference to the navbar
 
     useEffect(() => {
         const section = location.hash.replace('#', '') || 'home';
@@ -25,9 +26,27 @@ const Navbar = () => {
         }
     }, [location]);
 
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            // Check if click is outside of the navbar container
+            if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+                setIsCollapsed(true); // Close the navbar
+            }
+        };
+
+        // Add event listener to detect clicks outside the navbar
+        document.addEventListener('mousedown', handleClickOutside);
+
+        // Cleanup the event listener on component unmount
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
     const handleNavClick = (section) => {
         setActiveLink(section);
         navigate(`/#${section}`);
+        setIsCollapsed(true); // Close the navbar on link click
     };
 
     const handleToggle = () => {
@@ -36,10 +55,11 @@ const Navbar = () => {
 
     const handleLogout = () => {
         dispatch({ type: 'LOGOUT' });
+        setIsCollapsed(true); // Close the navbar on logout
     };
 
     return (
-        <header className="header">
+        <header className="header" ref={navbarRef}> {/* Attach the reference to the main navbar container */}
             <div className="main-header">
                 <div className="container-fluid">
                     <nav className="navbar navbar-expand-lg navbar-light fixed-top p-2">
