@@ -129,6 +129,10 @@ a {
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  overflow: hidden;
 }
 .main-header .navbar-brand {
   width:140px;
@@ -181,7 +185,7 @@ a {
   line-height: 21px;
   font-size: 16px;
   color: var(--e-global-color-secondary) !important;
-  padding: 10px 22px 10px 22px !important;
+  padding: 10px 22px !important;
   display: inline-block;
   border-radius: 57px;
   font-weight: 700;
@@ -262,13 +266,12 @@ a {
 }
 
 /* home-section */
-
 .home-banner-section .home-banner-text {
   padding: 0px 0 277px 0px;
 }
-.home-banner-section{
+.home-banner-section .banner-container-box {
   padding-top: 120px;
-  padding-left: 344px;
+  display: block;
   position: relative;
 }
 .banner-img{
@@ -282,7 +285,6 @@ a {
   margin-bottom: 10px;
   padding-right: 67px;
 }
-
 .banner-paragraph {
   font-size: 20px;
   font-weight: 400;
@@ -293,7 +295,6 @@ a {
 }
 .home-banner-section .banner-container-box  .social-icons ul{
   left: -250px;
-  top: 39px;
 }
 .home-banner-section .banner-img-outer{
   padding-top: 100px;
@@ -309,7 +310,6 @@ a {
   width: 28px;
   height: 20px;
   position: absolute;
-  top: -4px;
   left: 1%;
   right: 0;
 }
@@ -470,8 +470,18 @@ a {
   margin-bottom:16px;
   text-transform: uppercase;
 }
+
+/* Add bottom spacing to slick-track */
+.slick-track {
+  margin-bottom: 20px !important;
+  margin-top: 20px !important;
+}
+
 .whychoose-section .blogs-section {
   background: var(--e-global-color-white);
+  width: 100%;
+  max-width: 400px; /* Static max width */
+  height: 500px; /* Static height */
   border-radius: 0px;
   padding: 0px 0 24px;
   transition: 0s all ease-in-out;
@@ -661,7 +671,7 @@ nav.fill ul li a:after {
   position: relative;
 }
 .about-us-section:before {
-  background: url(../assets/images/aboutus-background.png);
+  background: url(../assets/images/about-us-bg.png);
   content: "";
   position: absolute;
   top:0px;
@@ -882,7 +892,7 @@ nav.fill ul li a:after {
   color: var(--e-global-color-accent);
 }
 .mission-section .autorix-text:before {
-  background: url(../assets/images/whychoose-bars.png);
+  background: none;
   content: "";
   width: 28px;
   height: 20px;
@@ -2261,6 +2271,11 @@ box-shadow: 0px 7px 21px 0 #dae0e5;
   padding: 140px 0 100px;
   position: relative;
 }
+
+/* our-teams */
+.our-teams-page {
+  background: var(--e-global-color-white);
+}
 /* our-teams */
 .our-teams-page .autorix-text {
   letter-spacing: 0px;
@@ -2270,7 +2285,7 @@ box-shadow: 0px 7px 21px 0 #dae0e5;
   color: var(--e-global-color-accent);
 }
 .our-teams-page .autorix-text:before {
-  background: url(../assets/images/whychoose-bars.png);
+  background: none;
   content: "";
   width: 28px;
   height: 20px;
@@ -2287,7 +2302,7 @@ box-shadow: 0px 7px 21px 0 #dae0e5;
 }
 .our-teams-page{
   background:transparent;
-  padding: 138px 0 140px;
+  padding: 50px 0 80px;
   position: relative;
 }
 .our-teams-page .teams-card .teams-card-fig{

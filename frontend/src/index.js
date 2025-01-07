@@ -20,7 +20,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter> {/* Wrap your app with BrowserRouter */}
+    <BrowserRouter> 
       <AuthProvider>
         <App />
       </AuthProvider>,
@@ -29,3 +29,5 @@ root.render(
 );
 
 serviceWorkerRegistration.register();
+
+

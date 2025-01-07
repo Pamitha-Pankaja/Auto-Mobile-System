@@ -1,11 +1,18 @@
 import React from 'react';
+
+import { Link, useNavigate } from 'react-router-dom';
 import teamImg1 from '../../assets/images/teams-img1.png';
 import teamImg2 from '../../assets/images/teams-img2.png';
 import teamImg3 from '../../assets/images/teams-img3.png';
 import teamImg4 from '../../assets/images/teams-img4.png';
 import teamBottomImg from '../../assets/images/teams-bottom-img.png';
 
+
+
 const Team= () => {
+  
+  const navigate = useNavigate();
+
   return (
     <section id='team' className="teams-section overflow-hidden">
       <div className="container">
@@ -17,7 +24,9 @@ const Team= () => {
               <p className="teams-p1" data-aos="fade-left">At our service station, our expert team is dedicated to providing top-notch care and attention to your vehicle. With years of industry experience and a commitment to excellence, our skilled professionals are trained to handle all your automotive needs.</p>
               <p className="teams-p2" data-aos="fade-right">From routine maintenance to complex repairs, we pride ourselves on delivering exceptional service with a focus on quality, efficiency, and customer satisfaction. Trust our experts to keep your vehicle running smoothly and safely.</p>
               <div className="banner-btn discover-btn-banner" data-aos="fade-up">
-                <a href="our-team.html" className="text-decoration-none">View All members <i className="fa-solid fa-arrow-right"></i></a>
+                <Link className="nav-link" to="/allMembers">
+                  View All members<i className="fa-solid fa-arrow-right"></i>
+                </Link>
               </div>
             </div>
           </div>

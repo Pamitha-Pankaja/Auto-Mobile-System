@@ -108,7 +108,7 @@
 
 
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import textIcon from '../../assets/images/whychoose-bars.png';
 import ourServiceImg1 from '../../assets/images/our-services-img1.png';
 import ourServiceImg2 from '../../assets/images/our-services-img2.png';
@@ -118,11 +118,15 @@ import ourServiceImg6 from '../../assets/images/our-services-img6.png';
 import ourServiceCar from '../../assets/images/our-services-car-img.png';
 
 const Services = () => {
+    let local = "http://localhost:8080";
+  let deploy = "https://robust-wonder-production.up.railway.app"
+  let basurl = local;
+
     const navigate = useNavigate();
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:8080/api/service-categories')
+        fetch(local+'/api/service-categories')
             .then(response => response.json())
             .then(data => setCategories(data))
             .catch(error => console.error('Error fetching categories:', error));
@@ -141,7 +145,7 @@ const Services = () => {
                     <div className="col-12">
                         <h6 className="autorix-text text-center">
                             <img src={textIcon} alt="Why Choose Us Left Icon" className="text-icon" />
-                            our services
+                             our services
                         </h6>
                         <h2 className="text-center" data-aos="fade-zoom-in">We Provide Great Services For your Vehicle</h2>
                     </div>
@@ -226,7 +230,9 @@ const Services = () => {
                 </div>
 
                 <div className="banner-btn discover-btn-banner text-center">
-                    <a href="services.html" className="text-decoration-none">View All services <i className="fa-solid fa-arrow-right"></i></a>
+                    <Link className="nav-link" to="/allServices">
+                       View All services<i className="fa-solid fa-arrow-right"></i>
+                    </Link>
                 </div>
             </div>
         </section>

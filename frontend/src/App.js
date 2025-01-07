@@ -7,6 +7,8 @@ import Navbar from './components/Navbar';
 import SubServices from './components/HomeSections/SubServices';
 import AdminDashboard from './pages/AdminDashboard';
 import UserProfile from './pages/UserProfile';
+import AllMembers from './pages/AllMembers'
+import AllServices from './pages/AllServices';
 
 const App = () => {
   const location = useLocation();
@@ -32,6 +34,8 @@ const App = () => {
           <Route path="/services" element={<SubServices />} />
           <Route path="/dashboard" element={<AdminDashboard />} />
           <Route path="/userprofile" element={<UserProfile />} />
+          <Route path="/allMembers" element={<AllMembers/>}/>
+          <Route path="/allServices" element={<AllServices/>}/>
         </Routes>
       </div>
     </div>
