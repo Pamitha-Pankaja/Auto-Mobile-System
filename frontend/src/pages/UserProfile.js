@@ -133,7 +133,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const UserProfile = () => {
   let local = "http://localhost:8080";
   let deploy = "https://robust-wonder-production.up.railway.app"
-  let basurl = deploy;
+  let basurl = local;
   const navigate = useNavigate(); 
   const { state } = useContext(AuthContext);
   const [vehicleDetails, setVehicleDetails] = useState([]);

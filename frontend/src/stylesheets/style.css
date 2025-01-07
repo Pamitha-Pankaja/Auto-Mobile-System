@@ -470,8 +470,18 @@ a {
   margin-bottom:16px;
   text-transform: uppercase;
 }
+
+/* Add bottom spacing to slick-track */
+.slick-track {
+  margin-bottom: 20px !important;
+  margin-top: 20px !important;
+}
+
 .whychoose-section .blogs-section {
   background: var(--e-global-color-white);
+  width: 100%;
+  max-width: 400px; /* Static max width */
+  height: 500px; /* Static height */
   border-radius: 0px;
   padding: 0px 0 24px;
   transition: 0s all ease-in-out;
@@ -882,7 +892,7 @@ nav.fill ul li a:after {
   color: var(--e-global-color-accent);
 }
 .mission-section .autorix-text:before {
-  background: url(../assets/images/whychoose-bars.png);
+  background: none;
   content: "";
   width: 28px;
   height: 20px;
@@ -2261,6 +2271,11 @@ box-shadow: 0px 7px 21px 0 #dae0e5;
   padding: 140px 0 100px;
   position: relative;
 }
+
+/* our-teams */
+.our-teams-page {
+  background: var(--e-global-color-white);
+}
 /* our-teams */
 .our-teams-page .autorix-text {
   letter-spacing: 0px;
@@ -2270,7 +2285,7 @@ box-shadow: 0px 7px 21px 0 #dae0e5;
   color: var(--e-global-color-accent);
 }
 .our-teams-page .autorix-text:before {
-  background: url(../assets/images/whychoose-bars.png);
+  background: none;
   content: "";
   width: 28px;
   height: 20px;
@@ -2287,7 +2302,7 @@ box-shadow: 0px 7px 21px 0 #dae0e5;
 }
 .our-teams-page{
   background:transparent;
-  padding: 138px 0 140px;
+  padding: 50px 0 80px;
   position: relative;
 }
 .our-teams-page .teams-card .teams-card-fig{

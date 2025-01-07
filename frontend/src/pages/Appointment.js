@@ -305,7 +305,7 @@ const Appointment = () => {
 
   let local = "http://localhost:8080";
   let deploy = "https://robust-wonder-production.up.railway.app"
-  let basurl = deploy;
+  let basurl = local;
   const navigate = useNavigate(); 
   const [selectedCategory, setSelectedCategory] = useState('');
   const [selectedCategoryList, setSelectedCategoryList] = useState([]);

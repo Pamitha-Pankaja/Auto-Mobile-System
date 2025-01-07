@@ -181,8 +181,8 @@ import 'slick-carousel/slick/slick-theme.css';
 import textIcon from '../../assets/images/whychoose-bars.png'; // Icon import
 
 // Hybrid Services Images
-import batteryReplacements from '../../assets/images/hybrid/batteryReplacements.jpeg';
-import cellReplacements from '../../assets/images/hybrid/cellReplacements.jpeg';
+import batteryReplacements from '../../assets/images/hybrid/batteryReplacements.jpg';
+import cellReplacements from '../../assets/images/hybrid/cellReplacements.jpg';
 import batteryScanning from '../../assets/images/hybrid/batteryScanning.jpg';
 import ecoBatteryReplace from '../../assets/images/hybrid/ecoBatteryReplace.jpg';
 
@@ -191,24 +191,63 @@ import bodyWash from '../../assets/images/vehicleService/bodyWash.jpg';
 import fullService from '../../assets/images/vehicleService/fullService.jpg';
 import oilChange from '../../assets/images/vehicleService/oilChange.jpg';
 import airFilterChange from '../../assets/images/vehicleService/airFilterChange.jpg';
+import interim from '../../assets/images/vehicleService/interim.jpg'
+
+//Painting Services Images
+import cutPolish from '../../assets/images/painting/cutPolish.jpg';
+import fullBodyPaint from '../../assets/images/painting/fullBodyPaint.jpg';
+import nanoCoat from '../../assets/images/painting/nanoCoating.jpg';
+import panelPaint from '../../assets/images/painting/panelPaint.jpg'
+
+//Accident Repair Images
+import dentRepair from '../../assets/images/accidentRepair/dentRepair.jpg';
+import bumpRepair from '../../assets/images/accidentRepair/bumpRepair.jpg';
+import scratchRemove from '../../assets/images/accidentRepair/scratchRemove.jpg'
+
+//Engine Repair Images
+import  tuneUp from '../../assets/images/engineRepair/tuneUp.jpg';
+import  valveAdjust from '../../assets/images/engineRepair/valveAdjust.jpg';
+import  engineRebuild from '../../assets/images/engineRepair/engineRebuild.jpg';
+import { timers } from 'jquery';
+
 
 // Service Image Mapping
 const imageMap = {
-    'Battery Replacements': batteryReplacements,
-    'Cell Replacements': cellReplacements,
-    'Battery Scanning': batteryScanning,
-    'Eco Battery Replace': ecoBatteryReplace,
-    'Body Wash': bodyWash,
+    // Vehicle Services
+    'BodyWash': bodyWash,
     'Full Service': fullService,
     'Oil Change': oilChange,
-    'Air Filter Change': airFilterChange,
+    'Air-Filter Change': airFilterChange,
+    'Interim Service': interim,
+
+    // Hybrid Services
+    'Battery Replacements': batteryReplacements,
+    'Battery Scanning': batteryScanning,
+    'Cell Replacements': cellReplacements,
+    'Eco Battery Replace': ecoBatteryReplace,
+
+    //Painting Services
+    'Nano Coating': nanoCoat,
+    'Full Body Paint': fullBodyPaint,
+    'Panel Painting': panelPaint,
+    'Cut And Polish':cutPolish,
+    
+    //Accident Repair
+    'Dent Repairs': dentRepair,
+    'Bumper Repair': bumpRepair,
+    'Scratch Removal': scratchRemove,
+
+    //Engine Repair
+    'Tune-Ups': tuneUp,
+    'Valve Adjustments': valveAdjust,
+    'Engine Rebuilds': engineRebuild,
 };
 
 const SubServices = () => {
 
     let local = "http://localhost:8080";
   let deploy = "https://robust-wonder-production.up.railway.app"
-  let basurl = deploy;
+  let basurl = local;
 
     const location = useLocation();
     const { categoryId } = location.state || {};
@@ -217,7 +256,7 @@ const SubServices = () => {
 
     useEffect(() => {
         if (categoryId) {
-            fetch(deploy+`/api/services/category/${categoryId}`)
+            fetch(local+`/api/services/category/${categoryId}`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
@@ -255,11 +294,12 @@ const SubServices = () => {
     };
 
     return (
-        <section className="main-container whychoose-section">
+        <div className='user-profile'>
+        <section className="whychoose-section overflowY-auto">
             <div className="container">
                 <div className="row">
                     <div className="col-">
-                        <h6 className="autorix-text">
+                        <h6 className="autorix-text text-center">
                             <img src={textIcon} alt="Why Choose Us Left Icon" className="text-icon" />
                             Sub Services
                         </h6>
@@ -292,6 +332,7 @@ const SubServices = () => {
                 </div>
             </div>
         </section>
+        </div>
     );
 };
 

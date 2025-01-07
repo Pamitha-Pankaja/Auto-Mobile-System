@@ -5,7 +5,7 @@ import axios from 'axios';
 const ServiceCategoriesDashboard = () => {
   let local = "http://localhost:8080";
   let deploy = "https://robust-wonder-production.up.railway.app"
-  let basurl = deploy;
+  let basurl = local;
   const [categories, setCategories] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [editCategory, setEditCategory] = useState(null);

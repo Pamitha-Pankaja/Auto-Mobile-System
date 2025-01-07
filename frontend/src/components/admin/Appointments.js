@@ -8,7 +8,7 @@ import Sidebar from './Sidebar';
 const Appointments = () => {
   let local = "http://localhost:8080";
   let deploy = "https://robust-wonder-production.up.railway.app"
-  let basurl = deploy;
+  let basurl = local;
   const [appointments, setAppointments] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const appointmentsPerPage = 10;
