@@ -338,10 +338,16 @@ const Appointment = () => {
   }, [selectedCategory]);
 
   useEffect(() => {
-    if (selectedDate) {
-      fetchAvailableTimeSlots(selectedDate);
+    if (selectedService && selectedDate) {
+      fetchAvailableTimeSlots(selectedDate, selectedService.id);
     }
-  }, [selectedDate]);
+  }, [selectedService, selectedDate]);
+
+  // useEffect(() => {
+  //   if (selectedDate) {
+  //     fetchAvailableTimeSlots(selectedDate);
+  //   }
+  // }, [selectedDate]);
 
   const fetchCategories = async () => {
     try {
@@ -361,9 +367,9 @@ const Appointment = () => {
     }
   };
 
-  const fetchAvailableTimeSlots = async (selectedDate) => {
+  const fetchAvailableTimeSlots = async (selectedDate, serviceId) => {
     try {
-      let url = `${basurl}/api/appointments/available-slots?date=${selectedDate}&serviceId=${selectedService.id}`;
+      let url = `${basurl}/api/appointments/available-slots?date=${selectedDate}&serviceId=${serviceId}`;
       const response = await axios.get(url);
       console.log(response);
       setAvailableTimeSlots(response.data);
