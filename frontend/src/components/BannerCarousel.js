@@ -8,7 +8,7 @@ const BannerCarousel = () => {
         <div className="carousel-item active">
           <div className="home-banner-text">
             <h6 className="text-white autorix-text">We have talented engineers &amp; mechanics</h6>
-            <h1 className="text-white">The #1 Destination for Vehicle Care</h1>
+            <h1 className="text-white">The Destination for Vehicle Care</h1>
             <p className="text-white banner-paragraph">Exceptional service, expert technicians, and a commitment to your vehicle’s health</p>
             <div className="banner-btn discover-btn-banner" data-aos="zoom-out-left">
               {/* <a href="services.html" className="text-decoration-none">Book Now <i className="fa-solid fa-arrow-right"></i></a> */}
